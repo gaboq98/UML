@@ -3,12 +3,12 @@
   <name>MATERIALSERVICIO</name>
   <columns>
     <column>
-      <name>TIPO</name>
+      <name>CODIGO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Long">1</value>
+            <value class="java.lang.Long">20</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -18,12 +18,12 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>CODIGO</name>
+      <name>TIPO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Long">20</value>
+            <value class="java.lang.Long">1</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -58,11 +58,26 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>MATERIALSERVICIO_CHK1</name>
+      <checkCondition>TIPO = &apos;S&apos; or TIPO = &apos;P&apos;</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <name>MATERIALSERVICIO_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MATERIALSERVICIO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>TIPO</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>MATERIALSERVICIO</name>
             <schemaName>SCHEMA1</schemaName>
@@ -84,6 +99,32 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>MATERIALSERVICIO_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>TIPO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MATERIALSERVICIO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>MATERIALSERVICIO_UK1</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>MATERIALSERVICIO</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
   </constraints>
   <indexes>
     <index>
@@ -91,6 +132,24 @@
       <columnExpressions>
         <columnExpression>
           <expressionSource>CODIGO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>TIPO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>MATERIALSERVICIO_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>TIPO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

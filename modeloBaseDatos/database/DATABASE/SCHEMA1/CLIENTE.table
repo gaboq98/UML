@@ -3,6 +3,15 @@
   <name>CLIENTE</name>
   <columns>
     <column>
+      <name>CEDULA</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
       <name>NOMBRE</name>
       <dataTypeUsage>
         <attributeValues>
@@ -23,7 +32,7 @@
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Long">50</value>
+            <value class="java.lang.Long">20</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -31,15 +40,6 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>false</notNull>
-    </column>
-    <column>
-      <name>CEDULA</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
     </column>
   </columns>
   <constraints>
