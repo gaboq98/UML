@@ -3,7 +3,7 @@
   <name>TELÉFONO</name>
   <columns>
     <column>
-      <name>CEDULA</name>
+      <name>NUMERO</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
@@ -12,13 +12,22 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>NUMERO</name>
+      <name>CL_CEDULA</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>INT</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>CODIGO</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
     </column>
   </columns>
   <constraints>
@@ -26,7 +35,7 @@
       <name>TELÉFONO_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CEDULA</name>
+          <name>NUMERO</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>TELÉFONO</name>
             <schemaName>SCHEMA1</schemaName>
@@ -48,13 +57,65 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>TELÉFONO_CLIENTE_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CL_CEDULA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>TELÉFONO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>CLIENTE_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>CLIENTE</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>TELÉFONO_PROVEEDOR_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>TELÉFONO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PROVEEDOR_UK1</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROVEEDOR</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
   </constraints>
   <indexes>
     <index>
       <name>TELÉFONO_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>CEDULA</expressionSource>
+          <expressionSource>NUMERO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

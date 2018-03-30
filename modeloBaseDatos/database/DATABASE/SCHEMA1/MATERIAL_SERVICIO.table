@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>PROYECTO</name>
+  <name>MATERIAL_SERVICIO</name>
   <columns>
     <column>
-      <name>ID_PROYECTO</name>
+      <name>SP_CODIGO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -16,46 +16,52 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Va a ser llave foranea en Supervisor y en contrato</value>
-        </entry>
-      </properties>
     </column>
     <column>
-      <name>GASTO_QUINCENAL</name>
+      <name>DESCRIPCION</name>
       <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>LONG</typeName>
+          <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>false</notNull>
     </column>
     <column>
-      <name>CEDULA_SUPERVISOR</name>
+      <name>ULTIMO_COSTO</name>
       <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
+          <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>false</notNull>
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">Llave primaria de supervisor</value>
+          <value class="java.lang.String">Si esta nulo, es servicio, si no, es material</value>
         </entry>
       </properties>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PROYECTO_PK</name>
+      <name>MATERIAL_SERVICIO_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROYECTO</name>
+          <name>SP_CODIGO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROYECTO</name>
+            <name>MATERIAL_SERVICIO</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -65,9 +71,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PROYECTO_PK</name>
+        <name>MATERIAL_SERVICIO_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROYECTO</name>
+          <name>MATERIAL_SERVICIO</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -78,10 +84,10 @@
   </constraints>
   <indexes>
     <index>
-      <name>PROYECTO_PK</name>
+      <name>MATERIAL_SERVICIO_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_PROYECTO</expressionSource>
+          <expressionSource>SP_CODIGO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
