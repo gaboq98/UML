@@ -1,16 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>CONTRATO</name>
+  <name>EMPLEADOPROYECTO</name>
   <columns>
-    <column>
-      <name>CEDULA</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
     <column>
       <name>ID_PROYECTO</name>
       <dataTypeUsage>
@@ -20,15 +11,42 @@
       </dataTypeUsage>
       <notNull>true</notNull>
     </column>
+    <column>
+      <name>CEDULA_EMPLEADO</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>HORAS_TRABAJADAS</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <name>SALARIO_HORA</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>CONTRATO_CLIENTE_FK1</name>
+      <name>EMPLEADOPROYECTO_EMPLEADO_FK1</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CEDULA</name>
+          <name>CEDULA_EMPLEADO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>CONTRATO</name>
+            <name>EMPLEADOPROYECTO</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -38,9 +56,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>CLIENTE_PK</name>
+        <name>EMPLEADO_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>CLIENTE</name>
+          <name>EMPLEADO</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -48,13 +66,23 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>CONTRATO_PROYECTO_FK1</name>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>EMPLEADOPROYECTO_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_PROYECTO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>CONTRATO</name>
+            <name>EMPLEADOPROYECTO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CEDULA_EMPLEADO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>EMPLEADOPROYECTO</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -63,18 +91,38 @@
         </columnID>
       </columnIDs>
       <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROYECTO_PK</name>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>EMPLEADOPROYECTO_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROYECTO</name>
+          <name>EMPLEADOPROYECTO</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
+        <type>INDEX</type>
+      </indexID>
     </constraint>
   </constraints>
+  <indexes>
+    <index>
+      <name>EMPLEADOPROYECTO_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID_PROYECTO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>CEDULA_EMPLEADO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
   <properties>
     <entry>
       <key>TableType</key>

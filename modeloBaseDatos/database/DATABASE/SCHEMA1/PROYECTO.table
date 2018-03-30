@@ -3,15 +3,6 @@
   <name>PROYECTO</name>
   <columns>
     <column>
-      <name>GASTO_QUINCENAL</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>LONG</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>false</notNull>
-    </column>
-    <column>
       <name>CEDULA_SUPERVISOR</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -20,7 +11,100 @@
       </dataTypeUsage>
       <notNull>false</notNull>
     </column>
+    <column>
+      <name>ID_PROYECTO</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>INT</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
   </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PROYECTO_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROYECTO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROYECTO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>PROYECTO_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROYECTO</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>PROYECTO_UK2</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CEDULA_SUPERVISOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROYECTO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>PROYECTO_UK2</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROYECTO</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>PROYECTO_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID_PROYECTO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>PROYECTO_UK2</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>CEDULA_SUPERVISOR</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
   <properties>
     <entry>
       <key>TableType</key>

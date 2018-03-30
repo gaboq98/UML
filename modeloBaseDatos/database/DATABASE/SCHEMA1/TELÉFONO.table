@@ -22,8 +22,8 @@
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>TELÉFONO_PK</name>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>TELÉFONO_CLIENTE_FK1</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>CEDULA</name>
@@ -37,34 +37,44 @@
         </columnID>
       </columnIDs>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>TELÉFONO_PK</name>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>CLIENTE_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>TELÉFONO</name>
+          <name>CLIENTE</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>TELÉFONO_EMPLEADO_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CEDULA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>TELÉFONO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>EMPLEADO_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>EMPLEADO</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
     </constraint>
   </constraints>
-  <indexes>
-    <index>
-      <name>TELÉFONO_PK</name>
-      <columnExpressions>
-        <columnExpression>
-          <expressionSource>CEDULA</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SCHEMA1</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-  </indexes>
   <properties>
     <entry>
       <key>TableType</key>
