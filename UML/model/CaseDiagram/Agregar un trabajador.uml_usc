@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:fe992a57-6c88-4204-8633-cd27a622ae3e'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Agregar un trabajador'
+   visibility='public'>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:0aa805d5-2910-4f9f-b3cd-a9a158380a07'>
+   <addition href='urn:uuid:319da08f-4159-43a4-9941-f19e74970e41'/>
+  </include>
+ </uml:UseCase>
+</xmi:XMI>

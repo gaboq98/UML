@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:7d1f690b-096d-4440-939f-2e0735729072'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Agregar al Historial de Compras'
+   visibility='public'>
+  <extend xmi:type='uml:Extend' xmi:uuid='urn:uuid:d625f886-5d13-4ce4-a880-4befd542a866'>
+   <extendedCase href='urn:uuid:dcfbb915-ca3c-4b2f-9a2d-faf3146259ed'/>
+   <extensionLocation href='urn:uuid:6654b4cc-2a87-4ddc-b44a-2825b6d87412'/>
+  </extend>
+ </uml:UseCase>
+</xmi:XMI>

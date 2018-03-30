@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:420d6659-eae2-49fd-ae98-0ef777fa7891'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Solicitud de Factura'
+   visibility='public'>
+  <extend xmi:type='uml:Extend' xmi:uuid='urn:uuid:880c26c1-bd98-474f-8dd3-173f3c8ddc99'>
+   <extendedCase href='urn:uuid:f8311937-9ec9-4346-9e64-3fcffdcca733'/>
+   <extensionLocation href='urn:uuid:360bf10d-7df9-4cb1-953e-e29582470378'/>
+  </extend>
+  <extend xmi:type='uml:Extend' xmi:uuid='urn:uuid:368c94ec-a563-4996-a700-5536bab4d027'>
+   <extendedCase href='urn:uuid:dcfbb915-ca3c-4b2f-9a2d-faf3146259ed'/>
+   <extensionLocation href='urn:uuid:6654b4cc-2a87-4ddc-b44a-2825b6d87412'/>
+  </extend>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:64ffa635-77de-48ce-aad9-c498760d8ab6'>
+   <addition href='urn:uuid:be0b4dd2-6445-435c-a242-3d7aaf16aa0e'/>
+  </include>
+ </uml:UseCase>
+</xmi:XMI>

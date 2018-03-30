@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:bcb4f3a3-c5a9-447a-b757-671f0b5c7e02'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Ver facturas pendientes'
+   visibility='public'>
+  <extensionPoint xmi:type='uml:ExtensionPoint' xmi:uuid='urn:uuid:4b0c841c-3998-4f09-bb81-4961e5f8f32b'
+    isLeaf='false'
+    name='DefaultExtensionPoint'/>
+ </uml:UseCase>
+</xmi:XMI>

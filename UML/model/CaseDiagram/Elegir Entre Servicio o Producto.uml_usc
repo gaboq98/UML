@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:d5d7a880-03a3-4a16-b908-746f7570bca2'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Elegir Entre Servicio o Producto'
+   visibility='public'>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:0c79695a-1396-406e-b55c-3f64ad1a68ae'>
+   <addition href='urn:uuid:fab1bd4b-91a4-47e5-9355-553bff364876'/>
+  </include>
+ </uml:UseCase>
+</xmi:XMI>

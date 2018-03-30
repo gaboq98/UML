@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:dcfbb915-ca3c-4b2f-9a2d-faf3146259ed'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Consulta del historial de compras del proyecto'
+   visibility='public'>
+  <extend xmi:type='uml:Extend' xmi:uuid='urn:uuid:ea0e6a0e-59e5-4f3d-a2c0-5eea0afd5fbe'>
+   <extendedCase href='urn:uuid:bcb4f3a3-c5a9-447a-b757-671f0b5c7e02'/>
+   <extensionLocation href='urn:uuid:4b0c841c-3998-4f09-bb81-4961e5f8f32b'/>
+  </extend>
+  <extensionPoint xmi:type='uml:ExtensionPoint' xmi:uuid='urn:uuid:6654b4cc-2a87-4ddc-b44a-2825b6d87412'
+    isLeaf='false'
+    name='DefaultExtensionPoint'/>
+ </uml:UseCase>
+</xmi:XMI>

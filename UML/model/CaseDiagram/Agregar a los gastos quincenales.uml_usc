@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:be0b4dd2-6445-435c-a242-3d7aaf16aa0e'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Agregar a los gastos quincenales'
+   visibility='public'>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:6ea222a8-8bb6-4a18-bb8a-ac4755392854'>
+   <addition href='urn:uuid:7d1f690b-096d-4440-939f-2e0735729072'/>
+  </include>
+ </uml:UseCase>
+</xmi:XMI>

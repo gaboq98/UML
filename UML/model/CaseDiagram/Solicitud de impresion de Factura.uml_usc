@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:f8311937-9ec9-4346-9e64-3fcffdcca733'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Solicitud de impresion de Factura'
+   visibility='public'>
+  <extensionPoint xmi:type='uml:ExtensionPoint' xmi:uuid='urn:uuid:360bf10d-7df9-4cb1-953e-e29582470378'
+    isLeaf='false'
+    name='DefaultExtensionPoint'/>
+ </uml:UseCase>
+</xmi:XMI>

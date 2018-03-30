@@ -63,7 +63,7 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>MONTO_COBRADO</name>
@@ -105,6 +105,16 @@
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>FACTURA</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>FECHA_LIMITE</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>FACTURA</name>
             <schemaName>SCHEMA1</schemaName>
@@ -214,6 +224,11 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>FACTURA_CHK1</name>
+      <checkCondition>FECHA_LIMITE = getdate()</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
   </constraints>
   <indexes>
     <index>
@@ -221,6 +236,10 @@
       <columnExpressions>
         <columnExpression>
           <expressionSource>ID</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>FECHA_LIMITE</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

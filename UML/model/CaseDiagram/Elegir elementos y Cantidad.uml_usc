@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:fab1bd4b-91a4-47e5-9355-553bff364876'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Elegir elementos y Cantidad'
+   visibility='public'>
+  <extend xmi:type='uml:Extend' xmi:uuid='urn:uuid:80583e30-345f-4fff-a160-7f3546ea7a26'>
+   <extendedCase href='urn:uuid:6e1b0eb9-fe13-4575-ac26-4c2ac7e686f8'/>
+   <extensionLocation href='urn:uuid:71f7faa8-5ea0-440f-8f22-42d504055590'/>
+  </extend>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:5c291a14-4890-469f-be4e-965bd0a41f4f'>
+   <addition href='urn:uuid:420d6659-eae2-49fd-ae98-0ef777fa7891'/>
+  </include>
+ </uml:UseCase>
+</xmi:XMI>

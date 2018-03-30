@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
  <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
- <uml:Actor xmi:type='uml:Actor' xmi:uuid='urn:uuid:3d4007fc-b898-4924-b89c-addb39dc33c2'
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:6ccb250c-8bcd-437b-8ee7-cc364435620f'
    isAbstract='false'
    isFinalSpecialization='false'
    isLeaf='false'
-   name='Cristiano'
+   name='Consultar los gastos de la quincena'
    visibility='public'/>
 </xmi:XMI>
