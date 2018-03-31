@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:Class xmi:type='uml:Class' xmi:uuid='urn:uuid:6fe9cc16-913a-4dc2-a9c1-5ea745127efc'
+   isAbstract='false'
+   isActive='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Subject2'
+   visibility='public'>
+  <ownedComment xmi:type='uml:Comment' xmi:uuid='urn:uuid:58a91791-2897-4649-9092-e95f852c9223'
+    body='uml_uc:Subject'/>
+ </uml:Class>
+</xmi:XMI>

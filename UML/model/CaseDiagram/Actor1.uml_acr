@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:Actor xmi:type='uml:Actor' xmi:uuid='urn:uuid:f338b91d-0658-48e1-9393-9b0461a1c7db'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Actor1'
+   visibility='public'/>
+</xmi:XMI>

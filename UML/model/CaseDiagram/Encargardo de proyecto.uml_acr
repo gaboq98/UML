@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:Actor xmi:type='uml:Actor' xmi:uuid='urn:uuid:926aa682-97c0-43f0-ab5f-54414e25494b'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Encargardo de proyecto'
+   visibility='public'/>
+</xmi:XMI>
