@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>PROVEEDOR</name>
+  <name>MATERIAL_AD</name>
   <columns>
     <column>
-      <name>ID_PROVEEDOR</name>
+      <name>CODIGO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -18,37 +18,23 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>NBR_PROVEEDOR</name>
+      <name>DESCRIPCION</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Long">30</value>
+            <value class="java.lang.Long">40</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
+      <default class="java.lang.String">&apos;Sin descripcion&apos;</default>
       <notNull>false</notNull>
     </column>
     <column>
-      <name>DIRECCION</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">50</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>false</notNull>
-    </column>
-    <column>
-      <name>CEDULA</name>
+      <name>U_COSTO_COLONES</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -65,12 +51,12 @@
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PROVEEDOR_PK</name>
+      <name>MATERIAL_AD_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
+          <name>CODIGO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROVEEDOR</name>
+            <name>MATERIAL_AD</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -80,35 +66,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PROVEEDOR_PK</name>
+        <name>MATERIAL_AD_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>PROVEEDOR_UK1</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CEDULA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PROVEEDOR_UK1</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVEEDOR</name>
+          <name>MATERIAL_AD</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -119,24 +79,10 @@
   </constraints>
   <indexes>
     <index>
-      <name>PROVEEDOR_PK</name>
+      <name>MATERIAL_AD_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_PROVEEDOR</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SCHEMA1</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-    <index>
-      <name>PROVEEDOR_UK1</name>
-      <columnExpressions>
-        <columnExpression>
-          <expressionSource>CEDULA</expressionSource>
+          <expressionSource>CODIGO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

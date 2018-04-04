@@ -3,10 +3,31 @@
   <name>EMPLEADO</name>
   <columns>
     <column>
+      <name>ID_EMPLEADO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
       <name>CEDULA</name>
       <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">9</value>
+          </entry>
+        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
+          <typeName>NUMERIC</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -18,7 +39,7 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>NOMBRE</name>
@@ -33,7 +54,7 @@
           <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>DIRECCION</name>
@@ -56,7 +77,7 @@
       <name>EMPLEADO_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CEDULA</name>
+          <name>ID_EMPLEADO</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>EMPLEADO</name>
             <schemaName>SCHEMA1</schemaName>
@@ -78,10 +99,50 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>CEDULA_UK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CEDULA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>EMPLEADO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>EMPLEADO_UK1</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>EMPLEADO</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
   </constraints>
   <indexes>
     <index>
       <name>EMPLEADO_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID_EMPLEADO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>EMPLEADO_UK1</name>
       <columnExpressions>
         <columnExpression>
           <expressionSource>CEDULA</expressionSource>

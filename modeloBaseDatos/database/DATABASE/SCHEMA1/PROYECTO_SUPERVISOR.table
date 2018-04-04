@@ -1,42 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>FACTURA</name>
+  <name>PROYECTO_SUPERVISOR</name>
   <columns>
     <column>
-      <name>ID_FACTURA</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">6</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>FECHA</name>
+      <name>FECHA_INICIO</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>DATE</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>ID_PROVEEDOR</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">6</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -56,15 +26,49 @@
       </dataTypeUsage>
       <notNull>true</notNull>
     </column>
+    <column>
+      <name>FECHA_FINAL</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <name>ID_PROYECTO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">8</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>FACTURA_PK</name>
+      <name>PROYECTO_SUPERVISOR_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
+          <name>FECHA_INICIO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>FACTURA</name>
+            <name>PROYECTO_SUPERVISOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_EMPLEADO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROYECTO_SUPERVISOR</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -74,9 +78,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>FACTURA_PK</name>
+        <name>PROYECTO_SUPERVISOR_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>FACTURA</name>
+          <name>PROYECTO_SUPERVISOR</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -85,12 +89,12 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FACTURA_EMPLEADO_FK1</name>
+      <name>PROYECTO_SUPERVISOR_FK1</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_EMPLEADO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>FACTURA</name>
+            <name>PROYECTO_SUPERVISOR</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -111,12 +115,12 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FACTURA_PROVEEDOR_FK1</name>
+      <name>PROYECTO_SUPERVISOR_FK2</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
+          <name>ID_PROYECTO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>FACTURA</name>
+            <name>PROYECTO_SUPERVISOR</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -126,9 +130,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROVEEDOR_PK</name>
+        <name>PROYECTO_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVEEDOR</name>
+          <name>PROYECTO</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -136,18 +140,17 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>FACTURA_CHK1</name>
-      <checkCondition>FECHA = getdate()</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>FACTURA_PK</name>
+      <name>PROYECTO_SUPERVISOR_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_FACTURA</expressionSource>
+          <expressionSource>FECHA_INICIO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>ID_EMPLEADO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
