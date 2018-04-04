@@ -18,6 +18,21 @@
       <notNull>true</notNull>
     </column>
     <column>
+      <name>ID_PRODUCTO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
       <name>MONTO</name>
       <dataTypeUsage>
         <attributeValues>
@@ -61,6 +76,42 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>LINEA_FACTURA_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_FACTURA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINEA_FACTURA</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PRODUCTO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINEA_FACTURA</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>LINEA_FACTURA_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>LINEA_FACTURA</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>LINEA_FACTURA_FACTURA_FK1</name>
       <columnIDs>
@@ -87,12 +138,58 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>LINEA_FACTURA_PRODUCTOS_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PRODUCTO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LINEA_FACTURA</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PRODUCTOS_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PRODUCTOS</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
     <constraint class="oracle.javatools.db.CheckConstraint">
       <name>LINEA_FACTURA_CHK1</name>
       <checkCondition>ESTADO = &apos;P&apos; OR ESTADO = &apos;C&apos;</checkCondition>
       <enabled>true</enabled>
     </constraint>
   </constraints>
+  <indexes>
+    <index>
+      <name>LINEA_FACTURA_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID_FACTURA</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>ID_PRODUCTO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
   <properties>
     <entry>
       <key>TableType</key>
