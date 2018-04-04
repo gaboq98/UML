@@ -3,22 +3,13 @@
   <name>QUINCENA</name>
   <columns>
     <column>
-      <name>ID</name>
+      <name>FINAL</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
+          <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-    </column>
-    <column>
-      <name>ID_PROYECTO</name>
-      <dataTypeUsage>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>INT</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>false</notNull>
     </column>
   </columns>
   <constraints>
@@ -26,7 +17,7 @@
       <name>QUINCENA_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID</name>
+          <name>FINAL</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>QUINCENA</name>
             <schemaName>SCHEMA1</schemaName>
@@ -48,39 +39,13 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>QUINCENA_PROYECTO_FK1</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROYECTO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>QUINCENA</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROYECTO_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROYECTO</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
   </constraints>
   <indexes>
     <index>
       <name>QUINCENA_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID</expressionSource>
+          <expressionSource>FINAL</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
