@@ -1,7 +1,22 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>LINEA_FACTURA</name>
+  <name>L_MAT_PROVEEDOR</name>
   <columns>
+    <column>
+      <name>CODIGO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
     <column>
       <name>ID_FACTURA</name>
       <dataTypeUsage>
@@ -33,7 +48,22 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>MONTO</name>
+      <name>ID_PROVEEDOR</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>COSTO_UNIDAD</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -46,20 +76,14 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Precio incial de la factura</value>
-        </entry>
-      </properties>
     </column>
     <column>
-      <name>ESTADO</name>
+      <name>UNIDAD_MEDIDA</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Integer">1</value>
+            <value class="java.lang.Integer">5</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -67,27 +91,72 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">&apos;P&apos; = pendiente, &apos;C&apos; = cancelada</value>
-        </entry>
-      </properties>
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>LINEA_FACTURA_CHK1</name>
-      <checkCondition>ESTADO = &apos;P&apos; OR ESTADO = &apos;C&apos;</checkCondition>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>L_MAT_PROVEEDOR_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_FACTURA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_LINEA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
       <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>L_MAT_PROVEEDOR_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>L_MAT_PROVEEDOR</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>LINEA_FACTURA_FACTURA_FK1</name>
+      <name>L_MAT_PROVEEDOR_FK1</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_FACTURA</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
+            <name>L_MAT_PROVEEDOR</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -97,68 +166,6 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>FACTURA_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>FACTURA</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>LINEA_FACTURA_PK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_LINEA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>LINEA_FACTURA_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>LINEA_FACTURA</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>LINEA_FACTURA_UK1</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
         <name>LINEA_FACTURA_UK1</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>LINEA_FACTURA</name>
@@ -166,16 +173,16 @@
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
+        <type>CONSTRAINT</type>
+      </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>LINEA_FACTURA_UK2</name>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>L_MAT_PROVEEDOR_FK2</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_LINEA</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
+            <name>L_MAT_PROVEEDOR</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -184,7 +191,7 @@
         </columnID>
       </columnIDs>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
+      <referenceID class="oracle.javatools.db.NameBasedID">
         <name>LINEA_FACTURA_UK2</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>LINEA_FACTURA</name>
@@ -192,14 +199,70 @@
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>L_MAT_PROVEEDOR_FK3</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>MAT_PROOVEDOR_UK1</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>MAT_PROOVEDOR</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>L_MAT_PROVEEDOR_FK4</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>MAT_PROOVEDOR_UK2</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>MAT_PROOVEDOR</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
     </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>LINEA_FACTURA_PK</name>
+      <name>L_MAT_PROVEEDOR_PK</name>
       <columnExpressions>
+        <columnExpression>
+          <expressionSource>CODIGO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
         <columnExpression>
           <expressionSource>ID_FACTURA</expressionSource>
           <orderType>ASC</orderType>
@@ -208,32 +271,8 @@
           <expressionSource>ID_LINEA</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SCHEMA1</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-    <index>
-      <name>LINEA_FACTURA_UK1</name>
-      <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_FACTURA</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SCHEMA1</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-    <index>
-      <name>LINEA_FACTURA_UK2</name>
-      <columnExpressions>
-        <columnExpression>
-          <expressionSource>ID_LINEA</expressionSource>
+          <expressionSource>ID_PROVEEDOR</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

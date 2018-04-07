@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>LINEA_FACTURA</name>
+  <name>PROV_SERVICIO</name>
   <columns>
     <column>
-      <name>ID_FACTURA</name>
+      <name>CODIGO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -18,7 +18,7 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>ID_LINEA</name>
+      <name>ID_PROVEEDOR</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -31,63 +31,16 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
-    </column>
-    <column>
-      <name>MONTO</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>precision</key>
-            <value class="java.lang.String">10</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>NUMERIC</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">Precio incial de la factura</value>
-        </entry>
-      </properties>
-    </column>
-    <column>
-      <name>ESTADO</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Integer">1</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>CHAR</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-      <properties>
-        <entry>
-          <key>Comment</key>
-          <value class="java.lang.String">&apos;P&apos; = pendiente, &apos;C&apos; = cancelada</value>
-        </entry>
-      </properties>
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>LINEA_FACTURA_CHK1</name>
-      <checkCondition>ESTADO = &apos;P&apos; OR ESTADO = &apos;C&apos;</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>LINEA_FACTURA_FACTURA_FK1</name>
+      <name>PROV_SERVICIO_FK1</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
+          <name>CODIGO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
+            <name>PROV_SERVICIO</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -97,9 +50,35 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>FACTURA_PK</name>
+        <name>SERVICIOS_AD_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>FACTURA</name>
+          <name>SERVICIOS_AD</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>PROV_SERVICIO_PROVEEDOR_FK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROV_SERVICIO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PROVEEDOR_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROVEEDOR</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -108,12 +87,12 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>LINEA_FACTURA_PK</name>
+      <name>PROV_SERVICIO_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
+          <name>CODIGO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
+            <name>PROV_SERVICIO</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -121,9 +100,9 @@
           <type>COLUMN</type>
         </columnID>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_LINEA</name>
+          <name>ID_PROVEEDOR</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
+            <name>PROV_SERVICIO</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -133,9 +112,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>LINEA_FACTURA_PK</name>
+        <name>PROV_SERVICIO_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>LINEA_FACTURA</name>
+          <name>PROV_SERVICIO</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -144,12 +123,12 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>LINEA_FACTURA_UK1</name>
+      <name>PROV_SERVICIO_UK1</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
+          <name>CODIGO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
+            <name>PROV_SERVICIO</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -159,9 +138,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>LINEA_FACTURA_UK1</name>
+        <name>PROV_SERVICIO_UK1</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>LINEA_FACTURA</name>
+          <name>PROV_SERVICIO</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -170,12 +149,12 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>LINEA_FACTURA_UK2</name>
+      <name>PROV_SERVICIO_UK2</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_LINEA</name>
+          <name>ID_PROVEEDOR</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
+            <name>PROV_SERVICIO</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -185,9 +164,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>LINEA_FACTURA_UK2</name>
+        <name>PROV_SERVICIO_UK2</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>LINEA_FACTURA</name>
+          <name>PROV_SERVICIO</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -198,28 +177,14 @@
   </constraints>
   <indexes>
     <index>
-      <name>LINEA_FACTURA_PK</name>
+      <name>PROV_SERVICIO_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_FACTURA</expressionSource>
+          <expressionSource>CODIGO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
         <columnExpression>
-          <expressionSource>ID_LINEA</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SCHEMA1</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-    <index>
-      <name>LINEA_FACTURA_UK1</name>
-      <columnExpressions>
-        <columnExpression>
-          <expressionSource>ID_FACTURA</expressionSource>
+          <expressionSource>ID_PROVEEDOR</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
@@ -230,10 +195,24 @@
       <systemGenerated>true</systemGenerated>
     </index>
     <index>
-      <name>LINEA_FACTURA_UK2</name>
+      <name>PROV_SERVICIO_UK1</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_LINEA</expressionSource>
+          <expressionSource>CODIGO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>PROV_SERVICIO_UK2</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID_PROVEEDOR</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
