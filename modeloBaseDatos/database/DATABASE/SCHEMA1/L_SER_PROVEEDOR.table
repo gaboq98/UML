@@ -79,62 +79,6 @@
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>L_SER_PROVEEDOR_PK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_LINEA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>L_SER_PROVEEDOR_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>L_SER_PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>L_SER_PROVEEDOR_FK1</name>
       <columnIDs>
@@ -239,6 +183,88 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>L_SER_PROVEEDOR_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_SER_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_LINEA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_SER_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_FACTURA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_SER_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_SER_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>L_SER_PROVEEDOR_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>L_SER_PROVEEDOR</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>L_SER_PROVEEDOR_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_LINEA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_SER_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>L_SER_PROVEEDOR_UK1</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>L_SER_PROVEEDOR</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
   </constraints>
   <indexes>
     <index>
@@ -258,6 +284,20 @@
         </columnExpression>
         <columnExpression>
           <expressionSource>CODIGO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>L_SER_PROVEEDOR_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID_LINEA</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

@@ -32,6 +32,54 @@
       </dataTypeUsage>
       <notNull>true</notNull>
     </column>
+    <column>
+      <name>FECHA_REGISTRO</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>FECHA_ULT_MOD</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>ID_P_REGISTRO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>ID_P_ULT_MOD</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
@@ -51,6 +99,32 @@
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
         <name>TELEFONOS_EMPLEADO_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>TELEFONOS_EMPLEADO</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>TELEFONOS_EMPLEADO_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>FECHA_REGISTRO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>TELEFONOS_EMPLEADO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>TELEFONOS_EMPLEADO_UK1</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>TELEFONOS_EMPLEADO</name>
           <schemaName>SCHEMA1</schemaName>
@@ -86,6 +160,17 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>TEL_EMP_FCH_REGISTRO_CK</name>
+      <checkCondition>FECHA_REGISTRO = GETDATE()
+</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>TEL_EMP_FCH_ULT_MOD_CK</name>
+      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
   </constraints>
   <indexes>
     <index>
@@ -93,6 +178,20 @@
       <columnExpressions>
         <columnExpression>
           <expressionSource>NUMERO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>SCHEMA1</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>TELEFONOS_EMPLEADO_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>FECHA_REGISTRO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

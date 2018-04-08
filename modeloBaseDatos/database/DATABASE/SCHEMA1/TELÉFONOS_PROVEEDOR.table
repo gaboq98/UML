@@ -32,33 +32,65 @@
       </dataTypeUsage>
       <notNull>true</notNull>
     </column>
+    <column>
+      <name>ID_P_FECHA_REGISTRO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>ID_P_ULT_MOD</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>FECHA_REGISTRO</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>FECHA_ULT_MOD</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>TELÉFONO_PK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>NUMERO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>TELÉFONOS_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>TEL_PROV_FCH_REGISTRO_CK</name>
+      <checkCondition>FECHA_REGISTRO = GETDATE()</checkCondition>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>TELÉFONO_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>TELÉFONOS_PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>TEL_PROV_FCH_ULT_MOD_CK</name>
+      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
+      <enabled>true</enabled>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>TELÉFONO_PROVEEDOR_FK1</name>
@@ -85,6 +117,32 @@
         <schemaName>SCHEMA1</schemaName>
         <type>CONSTRAINT</type>
       </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>TELÉFONO_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>NUMERO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>TELÉFONOS_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>TELÉFONO_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>TELÉFONOS_PROVEEDOR</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
     </constraint>
   </constraints>
   <indexes>
