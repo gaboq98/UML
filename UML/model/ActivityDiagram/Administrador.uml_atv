@@ -86,7 +86,21 @@
   <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:939858d6-2486-4677-854a-7d5cb1baef70'
     isLeaf='false'
     name='ControlFlow11'>
+   <source href='urn:uuid:619ee985-7e66-4930-b17a-a4a7800ff766'/>
+   <target href='urn:uuid:015f1dd7-52ec-44d2-b62f-8eb37e182ccf'/>
+  </edge>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:2532048a-e963-45f8-bf7d-497f86fbc546'
+    isLeaf='false'
+    name='ControlFlow14'>
    <source href='urn:uuid:d628018d-df8e-43ec-ab57-cc7923d57df7'/>
+   <target href='urn:uuid:619ee985-7e66-4930-b17a-a4a7800ff766'/>
+   <ownedComment xmi:type='uml:Comment' xmi:uuid='urn:uuid:8afb4730-8365-4c6d-8b80-40e935cdc9a5'
+     body='uml_atv:HIDDEN'/>
+  </edge>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:1304c9a8-ba57-42a2-b792-f2182e0ff7b8'
+    isLeaf='false'
+    name='ControlFlow15'>
+   <source href='urn:uuid:015f1dd7-52ec-44d2-b62f-8eb37e182ccf'/>
    <target href='urn:uuid:093f578f-257d-40d7-ba82-83d92af75b3c'/>
   </edge>
   <node xmi:type='uml:InitialNode' xmi:uuid='urn:uuid:8649ab5b-2566-4228-b42a-19ad7fd63c5c'
@@ -158,12 +172,27 @@
     name='AndNode1'>
    <incoming href='urn:uuid:7be2e859-9699-44d6-bdb9-94b3a3300732'/>
    <incoming href='urn:uuid:1f5a6ebe-4607-4463-91d9-aa860f1a5f77'/>
-   <outgoing href='urn:uuid:939858d6-2486-4677-854a-7d5cb1baef70'/>
+   <outgoing href='urn:uuid:2532048a-e963-45f8-bf7d-497f86fbc546'/>
   </node>
   <node xmi:type='uml:FlowFinalNode' xmi:uuid='urn:uuid:093f578f-257d-40d7-ba82-83d92af75b3c'
     isLeaf='false'
     name='FlowFinalNode1'>
+   <incoming href='urn:uuid:1304c9a8-ba57-42a2-b792-f2182e0ff7b8'/>
+  </node>
+  <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:015f1dd7-52ec-44d2-b62f-8eb37e182ccf'
+    isLeaf='false'
+    isLocallyReentrant='false'
+    name='Registrr Cambio'>
    <incoming href='urn:uuid:939858d6-2486-4677-854a-7d5cb1baef70'/>
+   <outgoing href='urn:uuid:1304c9a8-ba57-42a2-b792-f2182e0ff7b8'/>
+  </node>
+  <node xmi:type='uml:ForkNode' xmi:uuid='urn:uuid:619ee985-7e66-4930-b17a-a4a7800ff766'
+    isLeaf='false'
+    name='AndNode2'>
+   <incoming href='urn:uuid:2532048a-e963-45f8-bf7d-497f86fbc546'/>
+   <outgoing href='urn:uuid:939858d6-2486-4677-854a-7d5cb1baef70'/>
+   <ownedComment xmi:type='uml:Comment' xmi:uuid='urn:uuid:8390f6bb-8b0d-4df9-a252-ffff1adb684b'
+     body='uml_atv:HIDDEN'/>
   </node>
  </uml:Activity>
 </xmi:XMI>
