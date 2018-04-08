@@ -95,7 +95,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>LINEA_FACTURA_UK1</name>
+        <name>LINEA_ID_FACTURA_UK</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>LINEA_FACTURA</name>
           <schemaName>SCHEMA1</schemaName>
@@ -121,7 +121,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>LINEA_FACTURA_UK2</name>
+        <name>LINEA_ID_LINEA_UK</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>LINEA_FACTURA</name>
           <schemaName>SCHEMA1</schemaName>
@@ -147,7 +147,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROV_SERVICIO_UK1</name>
+        <name>PROV_CODIGO_SERVICIO_UK</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>PROV_SERVICIO</name>
           <schemaName>SCHEMA1</schemaName>
@@ -173,7 +173,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROV_SERVICIO_UK2</name>
+        <name>ID_PROV_PROV_SERVICIO_UK</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>PROV_SERVICIO</name>
           <schemaName>SCHEMA1</schemaName>

@@ -33,7 +33,7 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>COLUMN1</name>
+      <name>ID_P_REGISTRO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -82,15 +82,31 @@
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>EMAIL_PROV_FCH_REGISTRO_CK</name>
-      <checkCondition>FECHA_REGISTRO= GETDATE()</checkCondition>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>EMAIL_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CORREO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>EMAIL_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
       <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>EMAIL_PROV_FCH_ULT_MOD_CK</name>
-      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
-      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>EMAIL_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>EMAIL_PROVEEDOR</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>EMAIL_PROVEEDOR_FK1</name>
@@ -118,31 +134,15 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>EMAIL_PK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CORREO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>EMAIL_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>EMAIL_PROV_FCH_REGISTRO_CK</name>
+      <checkCondition>FECHA_REGISTRO= GETDATE()</checkCondition>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>EMAIL_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>EMAIL_PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>EMAIL_PROV_FCH_ULT_MOD_CK</name>
+      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
+      <enabled>true</enabled>
     </constraint>
   </constraints>
   <indexes>
