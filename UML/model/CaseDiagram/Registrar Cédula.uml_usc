@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
  <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
- <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:df0b4cbc-0a6f-4ce6-8428-70dbc728a34b'
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:ed6198da-d0d6-4167-ba74-4f123e8830a7'
    isAbstract='false'
    isFinalSpecialization='false'
    isLeaf='false'
-   name='Registrar Nombre'
+   name='Registrar Cédula'
    visibility='public'>
   <subject href='urn:uuid:6fe9cc16-913a-4dc2-a9c1-5ea745127efc'/>
-  <extensionPoint xmi:type='uml:ExtensionPoint' xmi:uuid='urn:uuid:6035799e-8a22-4cb4-925a-6db5f8ba61b2'
+  <extensionPoint xmi:type='uml:ExtensionPoint' xmi:uuid='urn:uuid:ea86bcaf-1935-41d9-bad0-e3521a0507ac'
     isLeaf='false'
     name='DefaultExtensionPoint'/>
  </uml:UseCase>

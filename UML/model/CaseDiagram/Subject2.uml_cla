@@ -8,6 +8,27 @@
    isLeaf='false'
    name='Subject2'
    visibility='public'>
+  <useCase href='urn:uuid:1a905f75-0c13-4237-943d-33aee08fca6f'/>
+  <useCase href='urn:uuid:df0b4cbc-0a6f-4ce6-8428-70dbc728a34b'/>
+  <useCase href='urn:uuid:103f0396-d608-4b8d-829f-f92919634ff7'/>
+  <useCase href='urn:uuid:68a2a154-292b-4d49-8367-d674462c678c'/>
+  <useCase href='urn:uuid:9af086a7-e701-4b07-a615-08abe3a78ca0'/>
+  <useCase href='urn:uuid:ed6198da-d0d6-4167-ba74-4f123e8830a7'/>
+  <useCase href='urn:uuid:3f1f3e98-5e09-42f9-abe3-6d7b7f63cb8b'/>
+  <useCase href='urn:uuid:085079fa-1561-41d3-bd31-52f2bddca6ae'/>
+  <useCase href='urn:uuid:77b5b4fe-a0d6-4091-be98-0a7cc92bb037'/>
+  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:07256d25-704b-4851-b170-d63f6202ca2d'
+    isDerived='false'
+    isDerivedUnion='false'
+    isID='false'
+    isLeaf='false'
+    isOrdered='false'
+    isReadOnly='false'
+    isStatic='false'
+    isUnique='true'
+    aggregation='none'>
+   <type href='urn:uuid:187c05c7-6ce9-4059-9f71-eb932d15ae0b'/>
+  </ownedAttribute>
   <ownedComment xmi:type='uml:Comment' xmi:uuid='urn:uuid:58a91791-2897-4649-9092-e95f852c9223'
     body='uml_uc:Subject'/>
  </uml:Class>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:Activity xmi:type='uml:Activity' xmi:uuid='urn:uuid:bf1f6f93-6170-45d4-a0db-a7e2e3719b83'
+   isAbstract='false'
+   isActive='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   isReadOnly='false'
+   isReentrant='true'
+   isSingleExecution='false'
+   name='Supervisor'
+   visibility='public'>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:a1e2a695-305f-4be0-8cfc-e19661f9aaea'
+    isLeaf='false'
+    name='ControlFlow1'>
+   <source href='urn:uuid:2b625675-5a29-4ce2-86f4-743e7b64a821'/>
+   <target href='urn:uuid:090aa5fc-5c12-4ff4-985f-b0fa32000074'/>
+  </edge>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:1d38edf6-e7b0-4631-bdc3-fe402379411a'
+    isLeaf='false'
+    name='ControlFlow2'>
+   <source href='urn:uuid:19a829dd-0994-4ee3-a279-e79de632ab21'/>
+   <target href='urn:uuid:0079badd-7f71-4867-a058-960207d22637'/>
+  </edge>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:1a999181-3cd2-4585-ba65-aec18b49a921'
+    isLeaf='false'
+    name='ControlFlow3'>
+   <source href='urn:uuid:19a829dd-0994-4ee3-a279-e79de632ab21'/>
+   <target href='urn:uuid:ea27571d-71dd-4c1a-9350-6f74ebfdf33c'/>
+  </edge>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:4120d2ff-3494-4c93-b368-b6aa972672e9'
+    isLeaf='false'
+    name='ControlFlow4'>
+   <source href='urn:uuid:0079badd-7f71-4867-a058-960207d22637'/>
+   <target href='urn:uuid:75a9153a-fb5c-4ca6-8955-781eef907e69'/>
+  </edge>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:4c1c39ce-3cb7-4288-9eed-b951fbbeccf2'
+    isLeaf='false'
+    name='ControlFlow5'>
+   <source href='urn:uuid:ea27571d-71dd-4c1a-9350-6f74ebfdf33c'/>
+   <target href='urn:uuid:44641bf3-fbeb-4f63-9eb9-355c55ffd604'/>
+  </edge>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:6462dc28-4293-4658-bda6-8c239c812c9d'
+    isLeaf='false'
+    name='ControlFlow6'>
+   <source href='urn:uuid:75a9153a-fb5c-4ca6-8955-781eef907e69'/>
+   <target href='urn:uuid:be6a4111-bbbd-41bf-884e-2f86daa79d96'/>
+  </edge>
+  <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:090aa5fc-5c12-4ff4-985f-b0fa32000074'
+    isLeaf='false'
+    isLocallyReentrant='false'
+    name='Comprar'>
+   <incoming href='urn:uuid:a1e2a695-305f-4be0-8cfc-e19661f9aaea'/>
+  </node>
+  <node xmi:type='uml:InitialNode' xmi:uuid='urn:uuid:2b625675-5a29-4ce2-86f4-743e7b64a821'
+    isLeaf='false'
+    name='InitialNode1'>
+   <outgoing href='urn:uuid:a1e2a695-305f-4be0-8cfc-e19661f9aaea'/>
+  </node>
+  <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:0079badd-7f71-4867-a058-960207d22637'
+    isLeaf='false'
+    isLocallyReentrant='false'
+    name='Elegir Material'>
+   <incoming href='urn:uuid:1d38edf6-e7b0-4631-bdc3-fe402379411a'/>
+   <outgoing href='urn:uuid:4120d2ff-3494-4c93-b368-b6aa972672e9'/>
+  </node>
+  <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:ea27571d-71dd-4c1a-9350-6f74ebfdf33c'
+    isLeaf='false'
+    isLocallyReentrant='false'
+    name='Elegir Servicio'>
+   <incoming href='urn:uuid:1a999181-3cd2-4585-ba65-aec18b49a921'/>
+   <outgoing href='urn:uuid:4c1c39ce-3cb7-4288-9eed-b951fbbeccf2'/>
+  </node>
+  <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:75a9153a-fb5c-4ca6-8955-781eef907e69'
+    isLeaf='false'
+    isLocallyReentrant='false'
+    name='Elegir Proveedor'>
+   <incoming href='urn:uuid:4120d2ff-3494-4c93-b368-b6aa972672e9'/>
+   <outgoing href='urn:uuid:6462dc28-4293-4658-bda6-8c239c812c9d'/>
+  </node>
+  <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:44641bf3-fbeb-4f63-9eb9-355c55ffd604'
+    isLeaf='false'
+    isLocallyReentrant='false'
+    name='Elegir Proveedor'>
+   <incoming href='urn:uuid:4c1c39ce-3cb7-4288-9eed-b951fbbeccf2'/>
+  </node>
+  <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:be6a4111-bbbd-41bf-884e-2f86daa79d96'
+    isLeaf='false'
+    isLocallyReentrant='false'
+    name='Elegir Cantidad'>
+   <incoming href='urn:uuid:6462dc28-4293-4658-bda6-8c239c812c9d'/>
+  </node>
+  <node xmi:type='uml:DecisionNode' xmi:uuid='urn:uuid:19a829dd-0994-4ee3-a279-e79de632ab21'
+    isLeaf='false'
+    name='OrNode2'>
+   <outgoing href='urn:uuid:1d38edf6-e7b0-4631-bdc3-fe402379411a'/>
+   <outgoing href='urn:uuid:1a999181-3cd2-4585-ba65-aec18b49a921'/>
+  </node>
+ </uml:Activity>
+</xmi:XMI>

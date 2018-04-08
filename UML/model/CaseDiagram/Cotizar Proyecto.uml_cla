@@ -8,23 +8,6 @@
    isLeaf='false'
    name='Cotizar Proyecto'
    visibility='public'>
-  <useCase href='urn:uuid:147ab0e2-8219-49e2-9eee-77f34ed90fd8'/>
-  <useCase href='urn:uuid:b533b206-e5b6-42d0-8630-8577d8cf6611'/>
-  <useCase href='urn:uuid:6328e043-e986-48b4-8c57-5693b17ef2a4'/>
-  <useCase href='urn:uuid:38b825c8-dece-4957-9340-944d49add6f2'/>
-  <useCase href='urn:uuid:5dfbfa4e-8335-4b15-be80-7ee49d638422'/>
-  <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:71264a7b-ca17-44c4-a409-a8cba1e9f200'
-    isDerived='false'
-    isDerivedUnion='false'
-    isID='false'
-    isLeaf='false'
-    isOrdered='false'
-    isReadOnly='false'
-    isStatic='false'
-    isUnique='true'
-    aggregation='none'>
-   <type href='urn:uuid:926aa682-97c0-43f0-ab5f-54414e25494b'/>
-  </ownedAttribute>
   <ownedComment xmi:type='uml:Comment' xmi:uuid='urn:uuid:5fc1a122-4176-475e-8415-65ac41d9d2cd'
     body='uml_uc:Subject'/>
  </uml:Class>

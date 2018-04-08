@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
  <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
- <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:5dfbfa4e-8335-4b15-be80-7ee49d638422'
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:3f1f3e98-5e09-42f9-abe3-6d7b7f63cb8b'
    isAbstract='false'
    isFinalSpecialization='false'
    isLeaf='false'
-   name='Registrar Cedula'
+   name='Firmar contrato'
    visibility='public'>
-  <subject href='urn:uuid:ea682efe-e49d-48d4-ae4a-bc163886a20f'/>
+  <subject href='urn:uuid:6fe9cc16-913a-4dc2-a9c1-5ea745127efc'/>
  </uml:UseCase>
 </xmi:XMI>
