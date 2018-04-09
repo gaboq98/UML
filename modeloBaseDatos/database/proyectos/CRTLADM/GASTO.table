@@ -108,6 +108,52 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PK_GASTO</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROYECTO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>GASTO</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_FACTURA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>GASTO</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>GASTO</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>GASTO_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>GASTO</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>FK_GST_FACT_ID_FACTURA</name>
       <columnIDs>
@@ -118,7 +164,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -135,7 +181,7 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>GASTO_PROVEEDOR_FK1</name>
+      <name>FK_GST_PROV_ID_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_PROVEEDOR</name>
@@ -144,7 +190,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -160,7 +206,57 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FK_GST_PRY_ID_PROYECTO</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROYECTO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>GASTO</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PK_PROYECTO</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROYECTO</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
   </constraints>
+  <indexes>
+    <index>
+      <name>GASTO_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID_PROYECTO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>ID_FACTURA</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>ID_PROVEEDOR</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>CRTLADM</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
   <properties>
     <entry>
       <key>TableType</key>
