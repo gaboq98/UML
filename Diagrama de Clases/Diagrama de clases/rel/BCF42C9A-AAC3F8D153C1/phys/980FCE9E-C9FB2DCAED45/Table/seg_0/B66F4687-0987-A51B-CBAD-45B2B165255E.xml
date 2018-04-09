@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxySqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.TableProxySqlServerv2k5" name="PROVEEDOR_EMAIL" directorySegmentName="seg_0" id="B66F4687-0987-A51B-CBAD-45B2B165255E">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<database>DB_NULLELEMENT</database>
+<schema>1436A35C-E281-2619-4C9F-92862E6932FE</schema>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_ULT_MOD" id="2B6ED4BD-9783-6ED4-3018-30AB1EF9501B">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_PROVEEDOR" id="59391F16-8085-ADA6-9003-479526FAF793">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="CORREO" id="6121A6B4-D750-7E85-2374-0E95A7599675">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_REGISTRO" id="A0309E9D-77B7-A6C8-BC9F-152D46C2EE84">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="FECHA_REGISTRO" id="EE1E8A15-4759-B36B-BC88-DF9DBA6FAE05">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="FECHA_ULT_MOD" id="F3938F07-1AF1-5C1D-265F-81C76F0F360C">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="FK_EMAIL_PROV_ID_PROVEEDOR" id="54A0EDAB-A16A-587D-12EE-A3F300B5FF0A">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>script_JDeveloper</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.PKProxySqlServerv2k5" name="PK_EMAIL" id="9F628C09-95E2-353B-2ECB-18F877ED7F45">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<clustered>true</clustered>
+</PrimaryKey>
+</primaryKeys>
+</TableProxySqlServerv2k5>

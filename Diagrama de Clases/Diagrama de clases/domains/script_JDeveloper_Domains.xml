@@ -1,0 +1,156 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="script_JDeveloper_Domains">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_40" id="1531DA55-EC04-A5BD-ED91-8766801C0F48">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>40</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_9_0_0" id="37F2204A-7CB3-452B-63A0-B90DA25A063C">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>9</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="466FB1EA-78F1-7804-4450-21B305A189E0">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT007</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_6_0_0" id="4ADF7E0F-681E-7387-F580-39F8F66862C4">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>6</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_6" id="51E71617-CD20-BA30-C2F4-10210E2936E7">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>6</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20" id="59666F30-42DC-5B70-F4DF-86278E8561E7">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>20</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="CHAR_0_0_4" id="83CD528C-9F9E-52CB-ADE2-763CF770D3E6">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>4</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT025</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_30" id="9F778C51-BB16-E5DC-D86E-6B83A92F9D6F">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>30</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_50" id="B94B9B09-F5EA-F46A-D110-9F2A446BCD28">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>50</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="CHAR_0_0_5" id="BE7013F5-2AB7-9119-F663-0858DBECBD92">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>5</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT025</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_10_0_0" id="C65CA4C4-3CA7-0C40-2D2E-E9E344B8C542">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>10</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_8" id="D0299536-2BF4-9F2D-9E98-BFB8EAFEC8AF">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>8</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="CHAR_0_0_1" id="EA279F7E-CBBF-3457-7F03-7A30F67E86C7">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>1</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT025</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_8_0_0" id="F29CA653-7555-4D17-5759-31E756EC251B">
+         <createdBy>Lenovo</createdBy>
+         <createdTime>2018-04-09 20:51:05 UTC</createdTime>
+         <ownerDesignName>Diagrama de clases</ownerDesignName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>8</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>script_JDeveloper_Domains</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxySqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.TableProxySqlServerv2k5" name="L_SER_PROVEEDOR" directorySegmentName="seg_0" id="6B0B42F5-2675-DCD3-6FB4-5ACFE5AB5DD5">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<database>DB_NULLELEMENT</database>
+<schema>2010E1A1-C6FC-FC6A-1784-5728A52188BA</schema>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_ULT_MOD" id="04A40D54-947A-E4CA-F848-741F16D81763">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_FACTURA" id="057558A5-F56B-61F6-6E19-04453F5130ED">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="COSTO_TOTAL" id="05E4DC91-33DE-8286-F2B0-FE114655B69B">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_REGISTRO" id="08D86CD7-7CAA-B315-B4F1-4D1904508CA2">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_LINEA" id="1240539A-21A3-ED02-2760-24337ED9F50A">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="UNIDAD_MEDIDA" id="7DC0C3B7-10C7-5AB9-04CC-5FD923415B92">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="COSTO" id="982135FB-FAA5-8F56-4D11-22F2F26F5CCE">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="CODIGO" id="A6CE2EFE-4EDD-12D7-AFBF-5C3746460FB8">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_PROVEEDOR" id="A7D49E3D-F9C7-D153-31C7-1A08228695BD">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="CANTIDAD" id="ACE20E22-81F5-6051-85EF-DFD901F58D6C">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="FECHA_REGISTRO" id="AE50CD40-AEBB-0B6A-4411-748559D5385F">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="FECHA_ULT_MOD" id="E579E804-5FDD-7DBB-D1C8-211D3EF54437">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="FK_L_SER_PROV_FACT_ID_FACTURA" id="1B9A38A8-88BA-CE14-D972-9224AE008B67">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>script_JDeveloper</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="FK_L_SER_PROV_SER_CODIGO" id="CB0D5921-ABAC-C5F4-C673-41C7C1AEC784">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>script_JDeveloper</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.PKProxySqlServerv2k5" name="PK_L_SER_PROVEEDOR" id="CF7624E8-B74C-DA87-DFFA-AC3D6E58B914">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<clustered>true</clustered>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.UniqueProxySqlServerv2k5" name="L_SER_PROVEEDOR" id="50F43422-2A99-C829-89DC-AD981064B09D">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:53 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+</UniqueKey>
+</uniqueKeys>
+</TableProxySqlServerv2k5>

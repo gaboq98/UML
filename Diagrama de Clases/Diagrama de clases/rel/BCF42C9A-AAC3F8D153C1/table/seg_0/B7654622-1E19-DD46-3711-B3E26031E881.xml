@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B7654622-1E19-DD46-3711-B3E26031E881" name="LINEA_FACTURA">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>4C50F0DB-E05A-AC98-0218-948B2C2972C4</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_FACTURA" id="52562DF3-D6C0-AA23-4714-35CE4AF3CBFE">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>F8CDF684-59A7-326E-34F3-69C4D110187A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>51E71617-CD20-BA30-C2F4-10210E2936E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="15BDBC22-3099-5D57-0C20-95A7F1B08D3B" referredColumn="7E8552C2-51A5-4A68-4E3D-77933316591B"/>
+</associations>
+</Column>
+<Column name="ID_LINEA" id="D13CE2BE-6D4A-6079-A309-D184E9E2DA13">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>AA573835-FCF3-2D2B-F10E-3C3233710505</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>51E71617-CD20-BA30-C2F4-10210E2936E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_REGISTRO" id="50BD19D9-F78F-2C26-73E2-3CFE7EF6AC07">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>1974E2DA-9DF5-7221-245F-84AEEB44C7BB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>51E71617-CD20-BA30-C2F4-10210E2936E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_REGISTRO" id="5D57350C-C6A4-85A2-A29C-E71FD1FC2FA9">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>D7188588-77C1-2B88-42A1-A5EF2E8EC0F5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>466FB1EA-78F1-7804-4450-21B305A189E0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ULT_MOD" id="2E4C26CA-30CA-9F9F-2E43-F19DE30D8199">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>22D0A1FF-466D-4E9C-129D-5B771C66B833</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>51E71617-CD20-BA30-C2F4-10210E2936E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_ULT_MOD" id="47CF6BCE-0287-6B69-54E3-F189BABEDFAE">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>8775DD6B-4B94-C878-219A-944BA4D719AB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>466FB1EA-78F1-7804-4450-21B305A189E0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B5D61024-4F65-07A9-E15F-A09FE5DA2156" name="PK_LINEA_FACTURA">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>93FB3BD6-6AC3-58CC-C071-4BC9AA328BE4</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52562DF3-D6C0-AA23-4714-35CE4AF3CBFE"/>
+<colUsage columnID="D13CE2BE-6D4A-6079-A309-D184E9E2DA13"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AF2F4AF5-9B59-2E19-9BDE-0C313B49BB89" name="LINEA_ID_FACTURA">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>1AB64317-43A8-D2CB-D7CC-A6F94027A26F</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52562DF3-D6C0-AA23-4714-35CE4AF3CBFE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="287209C0-9193-3D4D-11F2-15E058DE1346" name="LINEA_FACTURA_FACTURA_FK">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:06 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="52562DF3-D6C0-AA23-4714-35CE4AF3CBFE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CK_L_F_FCH_REGISTRO" directorySegmentName="seg_0" id="D87A49F6-BC34-FAF1-32FB-D7CB0E65BF39">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>EDAB7EE2-987C-C1CD-D76E-6FBA107F7A61</importedID>
+<rule>FECHA_REGISTRO = GETDATE()</rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CK_L_F_FCH_ULT_MOD" directorySegmentName="seg_0" id="CC3BDF26-31D1-F9FD-99BB-A243E7FE6B1A">
+<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:51:05 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<importedID>666C88CE-63EA-2A46-3399-AA030B4BFAA7</importedID>
+<rule>FECHA_ULT_MOD = GETDATE()</rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

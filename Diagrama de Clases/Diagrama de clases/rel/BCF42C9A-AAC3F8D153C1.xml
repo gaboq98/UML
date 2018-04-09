@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="script_JDeveloper" id="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" mainViewID="52019157-CE75-0BCE-174E-E525EAE530D4">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 20:49:52 UTC</createdTime>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>980FCE9E-D688-BDF0-C89A-C9FB2DCAED45</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>script_JDeveloper.sql</fileName>
+<pathName>C:\Users\Lenovo\Desktop\Tecnologico\Bases de Datos\Caso 1</pathName>
+<dbType>13</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>
