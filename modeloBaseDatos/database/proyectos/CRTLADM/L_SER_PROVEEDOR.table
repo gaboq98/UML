@@ -172,88 +172,6 @@
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_L_SER_PROVEEDOR</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_LINEA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>L_SER_PROVEEDOR_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>L_SER_PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>L_SER_PROVEEDOR</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_LINEA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>L_SER_PROVEEDOR_UK1</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>L_SER_PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>FK_L_SER_PROV_FACT_ID_FACTURA</name>
       <columnIDs>
@@ -261,7 +179,7 @@
           <name>ID_FACTURA</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -273,7 +191,7 @@
         <name>LINEA_ID_FACTURA</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>LINEA_FACTURA</name>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
@@ -287,7 +205,7 @@
           <name>CODIGO</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>L_SER_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -299,12 +217,94 @@
         <name>PK_SERVICIO</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>SERVICIO</name>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
         <type>CONSTRAINT</type>
       </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PK_L_SER_PROVEEDOR</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_SER_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_LINEA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_SER_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_FACTURA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_SER_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_SER_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>L_SER_PROVEEDOR_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>L_SER_PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>L_SER_PROVEEDOR</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_LINEA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_SER_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>L_SER_PROVEEDOR_UK1</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>L_SER_PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>INDEX</type>
+      </indexID>
     </constraint>
   </constraints>
   <indexes>
@@ -330,7 +330,7 @@
       </columnExpressions>
       <indexType>UNIQUE</indexType>
       <schema>
-        <name>SCHEMA1</name>
+        <name>CRTLADM</name>
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
@@ -344,7 +344,7 @@
       </columnExpressions>
       <indexType>UNIQUE</indexType>
       <schema>
-        <name>SCHEMA1</name>
+        <name>CRTLADM</name>
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
@@ -356,6 +356,6 @@
     </entry>
   </properties>
   <schema>
-    <name>SCHEMA1</name>
+    <name>CRTLADM</name>
   </schema>
 </table>

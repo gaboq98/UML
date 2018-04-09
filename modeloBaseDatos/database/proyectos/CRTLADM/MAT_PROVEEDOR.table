@@ -1,24 +1,24 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>PROVEEDOR_TELEFONO</name>
+  <name>MAT_PROVEEDOR</name>
   <columns>
     <column>
-      <name>TELEFONO</name>
+      <name>ID_PROVEEDOR</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
-            <key>precision</key>
-            <value class="java.lang.String">8</value>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>NUMERIC</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
     </column>
     <column>
-      <name>ID_PROVEEDOR</name>
+      <name>CODIGO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -82,14 +82,14 @@
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_TELEFONO_PROVEEDOR</name>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FK_MAT_PROV_MAT_CODIGO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>TELEFONO</name>
+          <name>CODIGO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROVEEDOR_TELEFONO</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -97,25 +97,25 @@
         </columnID>
       </columnIDs>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>TELEFONO_PROVEEDOR_PK</name>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>MATERIAL_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVEEDOR_TELEFONO</name>
-          <schemaName>SCHEMA1</schemaName>
+          <name>MATERIAL</name>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
+        <type>CONSTRAINT</type>
+      </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_TEL_PROV_ID_PROVEEDOR</name>
+      <name>FK_MAT_PROV_PROV_ID_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_PROVEEDOR</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROVEEDOR_TELEFONO</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -127,26 +127,66 @@
         <name>PK_PROVEEDOR</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PK_MAT_PROVEEDOR</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>MAT_PROOVEDOR_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>MAT_PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>TELEFONO_PROVEEDOR_PK</name>
+      <name>MAT_PROOVEDOR_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>TELEFONO</expressionSource>
+          <expressionSource>CODIGO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>ID_PROVEEDOR</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
       <indexType>UNIQUE</indexType>
       <schema>
-        <name>SCHEMA1</name>
+        <name>CRTLADM</name>
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
@@ -158,6 +198,6 @@
     </entry>
   </properties>
   <schema>
-    <name>SCHEMA1</name>
+    <name>CRTLADM</name>
   </schema>
 </table>

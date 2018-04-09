@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>MATERIAL</name>
+  <name>HORAS_TRABAJADAS</name>
   <columns>
     <column>
-      <name>CODIGO</name>
+      <name>ID_EMPLEADO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -18,34 +18,59 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>DESCRIPCION</name>
+      <name>ID_PROYECTO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Long">40</value>
+            <value class="java.lang.Long">8</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <default class="java.lang.String">&apos;Sin descripcion&apos;</default>
       <notNull>true</notNull>
     </column>
     <column>
-      <name>U_COSTO_COLONES</name>
+      <name>CANTIDAD_DE_HORAS</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
             <key>precision</key>
-            <value class="java.lang.String">9</value>
+            <value class="java.lang.String">6</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>NUMERIC</typeName>
         </dataTypeID>
       </dataTypeUsage>
+      <default class="java.lang.String">1</default>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>QUINCENA</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>ESTADO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">1</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>CHAR</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <default class="java.lang.String">&apos;P&apos;</default>
       <notNull>true</notNull>
     </column>
     <column>
@@ -70,7 +95,7 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <default class="java.lang.String">GETDATE()</default>
+      <default class="java.lang.String">getdate()</default>
       <notNull>true</notNull>
     </column>
     <column>
@@ -95,19 +120,24 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <default class="java.lang.String">GETDATE()</default>
+      <default class="java.lang.String">getdate()</default>
       <notNull>true</notNull>
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>MATERIAL_PK</name>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_H_TRAB_ESTADO</name>
+      <checkCondition>ESTADO = &apos;P&apos; OR ESTADO = &apos;C&apos;</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FK_H_TRAB_EMP_ID_EMPLEADO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
+          <name>ID_EMPLEADO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>MATERIAL</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>HORAS_TRABAJADAS</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -115,34 +145,18 @@
         </columnID>
       </columnIDs>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>MATERIAL_AD_PK</name>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PK_EMPLEADO</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>MATERIAL</name>
-          <schemaName>SCHEMA1</schemaName>
+          <name>EMPLEADO</name>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
+        <type>CONSTRAINT</type>
+      </referenceID>
     </constraint>
   </constraints>
-  <indexes>
-    <index>
-      <name>MATERIAL_AD_PK</name>
-      <columnExpressions>
-        <columnExpression>
-          <expressionSource>CODIGO</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SCHEMA1</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-  </indexes>
   <properties>
     <entry>
       <key>TableType</key>
@@ -150,6 +164,6 @@
     </entry>
   </properties>
   <schema>
-    <name>SCHEMA1</name>
+    <name>CRTLADM</name>
   </schema>
 </table>

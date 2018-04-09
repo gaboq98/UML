@@ -1,14 +1,14 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>MAT_PROVEEDOR</name>
+  <name>PROYECTO</name>
   <columns>
     <column>
-      <name>ID_PROVEEDOR</name>
+      <name>ID_PROYECTO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Long">6</value>
+            <value class="java.lang.Long">8</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -18,18 +18,19 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>CODIGO</name>
+      <name>DESCRIPCION</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Long">6</value>
+            <value class="java.lang.Long">40</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
+      <default class="java.lang.String">&apos;Sin descripcion&apos;</default>
       <notNull>true</notNull>
     </column>
     <column>
@@ -83,23 +84,13 @@
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_MAT_PROVEEDOR</name>
+      <name>PK_PROYECTO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
+          <name>ID_PROYECTO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>MAT_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>MAT_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>PROYECTO</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -108,85 +99,29 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>MAT_PROOVEDOR_PK</name>
+        <name>PROYECTO_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>MAT_PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
+          <name>PROYECTO</name>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
-        <schemaName>SCHEMA1</schemaName>
+        <schemaName>CRTLADM</schemaName>
         <type>INDEX</type>
       </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_MAT_PROV_MAT_CODIGO</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>MAT_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>MATERIAL_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>MATERIAL</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_MAT_PROV_PROV_ID_PROVEEDOR</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>MAT_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PK_PROVEEDOR</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
     </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>MAT_PROOVEDOR_PK</name>
+      <name>PROYECTO_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>CODIGO</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-        <columnExpression>
-          <expressionSource>ID_PROVEEDOR</expressionSource>
+          <expressionSource>ID_PROYECTO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
       <indexType>UNIQUE</indexType>
       <schema>
-        <name>SCHEMA1</name>
+        <name>CRTLADM</name>
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
@@ -198,6 +133,6 @@
     </entry>
   </properties>
   <schema>
-    <name>SCHEMA1</name>
+    <name>CRTLADM</name>
   </schema>
 </table>

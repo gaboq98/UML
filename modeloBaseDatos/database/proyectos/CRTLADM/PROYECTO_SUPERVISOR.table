@@ -1,18 +1,12 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>EMPLEADO_PROYECTO</name>
+  <name>PROYECTO_SUPERVISOR</name>
   <columns>
     <column>
-      <name>ID_PROYECTO</name>
+      <name>FECHA_INICIO</name>
       <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">8</value>
-          </entry>
-        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR</typeName>
+          <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -33,18 +27,28 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>SALARIO_HORA</name>
+      <name>ID_PROYECTO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
-            <key>precision</key>
-            <value class="java.lang.String">8</value>
+            <key>size</key>
+            <value class="java.lang.Long">8</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>NUMERIC</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>FECHA_FINAL</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>DATE</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <default class="java.lang.String">2020-12-31</default>
       <notNull>true</notNull>
     </column>
     <column>
@@ -69,6 +73,7 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
+      <default class="java.lang.String">GetDate()</default>
       <notNull>true</notNull>
     </column>
     <column>
@@ -93,18 +98,19 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
+      <default class="java.lang.String">GetDate()</default>
       <notNull>true</notNull>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_EMP_PRY_ID_EMPLEADO</name>
+      <name>PROYECTO_SUPERVISOR_FK1</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_EMPLEADO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>EMPLEADO_PROYECTO</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>PROYECTO_SUPERVISOR</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -116,7 +122,7 @@
         <name>PK_EMPLEADO</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>EMPLEADO</name>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
@@ -124,13 +130,13 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_EMP_PRY_ID_PROYECTO</name>
+      <name>PROYECTO_SUPERVISOR_FK2</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_PROYECTO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>EMPLEADO_PROYECTO</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>PROYECTO_SUPERVISOR</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -142,7 +148,7 @@
         <name>PK_PROYECTO</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>PROYECTO</name>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
@@ -150,23 +156,23 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_EMP_PRY</name>
+      <name>PROYECTO_SUPERVISOR_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_EMPLEADO</name>
+          <name>FECHA_INICIO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>EMPLEADO_PROYECTO</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>PROYECTO_SUPERVISOR</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
           <type>COLUMN</type>
         </columnID>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROYECTO</name>
+          <name>ID_EMPLEADO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>EMPLEADO_PROYECTO</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>PROYECTO_SUPERVISOR</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -175,33 +181,33 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>EMPLEADOPROYECTO_PK</name>
+        <name>PROYECTO_SUPERVISOR_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>EMPLEADO_PROYECTO</name>
-          <schemaName>SCHEMA1</schemaName>
+          <name>PROYECTO_SUPERVISOR</name>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
-        <schemaName>SCHEMA1</schemaName>
+        <schemaName>CRTLADM</schemaName>
         <type>INDEX</type>
       </indexID>
     </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>EMPLEADOPROYECTO_PK</name>
+      <name>PROYECTO_SUPERVISOR_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_EMPLEADO</expressionSource>
+          <expressionSource>FECHA_INICIO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
         <columnExpression>
-          <expressionSource>ID_PROYECTO</expressionSource>
+          <expressionSource>ID_EMPLEADO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
       <indexType>UNIQUE</indexType>
       <schema>
-        <name>SCHEMA1</name>
+        <name>CRTLADM</name>
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
@@ -213,6 +219,6 @@
     </entry>
   </properties>
   <schema>
-    <name>SCHEMA1</name>
+    <name>CRTLADM</name>
   </schema>
 </table>

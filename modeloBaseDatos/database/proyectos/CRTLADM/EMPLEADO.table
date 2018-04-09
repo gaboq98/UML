@@ -136,6 +136,16 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_EMP_FCH_REGISTRO</name>
+      <checkCondition>FECHA_REGISTRO = GETDATE()</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_EMP_FCH_ULT_MOD</name>
+      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <name>PK_EMPLEADO</name>
       <columnIDs>
@@ -143,7 +153,7 @@
           <name>ID_EMPLEADO</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>EMPLEADO</name>
-            <schemaName>SCHEMA1</schemaName>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -155,10 +165,10 @@
         <name>EMPLEADO_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>EMPLEADO</name>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
-        <schemaName>SCHEMA1</schemaName>
+        <schemaName>CRTLADM</schemaName>
         <type>INDEX</type>
       </indexID>
     </constraint>
@@ -169,7 +179,7 @@
           <name>CEDULA</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>EMPLEADO</name>
-            <schemaName>SCHEMA1</schemaName>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -181,22 +191,12 @@
         <name>EMPLEADO_UK1</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>EMPLEADO</name>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
-        <schemaName>SCHEMA1</schemaName>
+        <schemaName>CRTLADM</schemaName>
         <type>INDEX</type>
       </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_EMP_FCH_REGISTRO</name>
-      <checkCondition>FECHA_REGISTRO = GETDATE()</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_EMP_FCH_ULT_MOD</name>
-      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
-      <enabled>true</enabled>
     </constraint>
   </constraints>
   <indexes>
@@ -210,7 +210,7 @@
       </columnExpressions>
       <indexType>UNIQUE</indexType>
       <schema>
-        <name>SCHEMA1</name>
+        <name>CRTLADM</name>
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
@@ -224,7 +224,7 @@
       </columnExpressions>
       <indexType>UNIQUE</indexType>
       <schema>
-        <name>SCHEMA1</name>
+        <name>CRTLADM</name>
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
@@ -236,6 +236,6 @@
     </entry>
   </properties>
   <schema>
-    <name>SCHEMA1</name>
+    <name>CRTLADM</name>
   </schema>
 </table>

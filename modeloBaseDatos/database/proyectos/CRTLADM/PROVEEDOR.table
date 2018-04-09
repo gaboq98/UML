@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>LINEA_FACTURA</name>
+  <name>PROVEEDOR</name>
   <columns>
     <column>
-      <name>ID_FACTURA</name>
+      <name>ID_PROVEEDOR</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -18,16 +18,47 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>ID_LINEA</name>
+      <name>NBR_PROVEEDOR</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
             <key>size</key>
-            <value class="java.lang.Long">6</value>
+            <value class="java.lang.Long">30</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
           <typeName>VARCHAR</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>DIRECCION</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">50</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <default class="java.lang.String">&apos;Sin direccion&apos;</default>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>CEDULA</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">9</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMERIC</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -57,7 +88,7 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>ID_ULT_MOD</name>
+      <name>ID_U_MOD</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -78,28 +109,29 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
+      <default class="java.lang.String">GETDATE()</default>
       <notNull>true</notNull>
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_PROV_FCH_REGISTRO</name>
+      <checkCondition>FECHA_REGISTRO = getdate()</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_PROV_FCH_U_MOD</name>
+      <checkCondition>FECHA_ULT_MOD = getdate()</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_LINEA_FACTURA</name>
+      <name>PK_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
+          <name>ID_PROVEEDOR</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_LINEA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -108,24 +140,24 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>LINEA_FACTURA_PK</name>
+        <name>PROVEEDOR_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>LINEA_FACTURA</name>
-          <schemaName>SCHEMA1</schemaName>
+          <name>PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
-        <schemaName>SCHEMA1</schemaName>
+        <schemaName>CRTLADM</schemaName>
         <type>INDEX</type>
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>LINEA_ID_FACTURA</name>
+      <name>UK_PROV_CED</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
+          <name>CEDULA</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -134,83 +166,43 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>LINEA_FACTURA_UK1</name>
+        <name>PROVEEDOR_UK1</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>LINEA_FACTURA</name>
-          <schemaName>SCHEMA1</schemaName>
+          <name>PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
-        <schemaName>SCHEMA1</schemaName>
+        <schemaName>CRTLADM</schemaName>
         <type>INDEX</type>
       </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>LINEA_FACTURA_FACTURA_FK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>LINEA_FACTURA</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PK_FACTURA</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>FACTURA</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_L_F_FCH_REGISTRO</name>
-      <checkCondition>FECHA_REGISTRO = GETDATE()</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_L_F_FCH_ULT_MOD</name>
-      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
-      <enabled>true</enabled>
     </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>LINEA_FACTURA_PK</name>
+      <name>PROVEEDOR_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_FACTURA</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-        <columnExpression>
-          <expressionSource>ID_LINEA</expressionSource>
+          <expressionSource>ID_PROVEEDOR</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
       <indexType>UNIQUE</indexType>
       <schema>
-        <name>SCHEMA1</name>
+        <name>CRTLADM</name>
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
     <index>
-      <name>LINEA_FACTURA_UK1</name>
+      <name>PROVEEDOR_UK1</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_FACTURA</expressionSource>
+          <expressionSource>CEDULA</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
       <indexType>UNIQUE</indexType>
       <schema>
-        <name>SCHEMA1</name>
+        <name>CRTLADM</name>
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
@@ -222,6 +214,6 @@
     </entry>
   </properties>
   <schema>
-    <name>SCHEMA1</name>
+    <name>CRTLADM</name>
   </schema>
 </table>

@@ -1,9 +1,24 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>CLIENTE</name>
+  <name>PROVEEDOR_TELEFONO</name>
   <columns>
     <column>
-      <name>ID_CLIENTE</name>
+      <name>TELEFONO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">8</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMERIC</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
+      <name>ID_PROVEEDOR</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -15,52 +30,6 @@
           <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>CEDULA</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>precision</key>
-            <value class="java.lang.String">9</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>NUMERIC</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>NOMBRE</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">30</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>DIRECCION</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">30</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <default class="java.lang.String">&apos;Sin direccion&apos;</default>
       <notNull>true</notNull>
     </column>
     <column>
@@ -113,14 +82,14 @@
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_CLIENTE</name>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FK_TEL_PROV_ID_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_CLIENTE</name>
+          <name>ID_PROVEEDOR</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>CLIENTE</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>PROVEEDOR_TELEFONO</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -128,25 +97,25 @@
         </columnID>
       </columnIDs>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>CLIENTE_PK</name>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PK_PROVEEDOR</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>CLIENTE</name>
-          <schemaName>SCHEMA1</schemaName>
+          <name>PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
+        <type>CONSTRAINT</type>
+      </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>UK_CLNT_CEDULA</name>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PK_TELEFONO_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CEDULA</name>
+          <name>TELEFONO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>CLIENTE</name>
-            <schemaName>SCHEMA1</schemaName>
+            <name>PROVEEDOR_TELEFONO</name>
+            <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
           <schemaName>SCHEMA1</schemaName>
@@ -155,43 +124,29 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>CLIENTE_UK1</name>
+        <name>TELEFONO_PROVEEDOR_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>CLIENTE</name>
-          <schemaName>SCHEMA1</schemaName>
+          <name>PROVEEDOR_TELEFONO</name>
+          <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
-        <schemaName>SCHEMA1</schemaName>
+        <schemaName>CRTLADM</schemaName>
         <type>INDEX</type>
       </indexID>
     </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>CLIENTE_PK</name>
+      <name>TELEFONO_PROVEEDOR_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_CLIENTE</expressionSource>
+          <expressionSource>TELEFONO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
       <indexType>UNIQUE</indexType>
       <schema>
-        <name>SCHEMA1</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-    <index>
-      <name>CLIENTE_UK1</name>
-      <columnExpressions>
-        <columnExpression>
-          <expressionSource>CEDULA</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SCHEMA1</name>
+        <name>CRTLADM</name>
       </schema>
       <systemGenerated>true</systemGenerated>
     </index>
@@ -203,6 +158,6 @@
     </entry>
   </properties>
   <schema>
-    <name>SCHEMA1</name>
+    <name>CRTLADM</name>
   </schema>
 </table>
