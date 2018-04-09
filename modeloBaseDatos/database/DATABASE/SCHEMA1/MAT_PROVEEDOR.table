@@ -98,7 +98,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>MATERIAL_AD_PK</name>
+        <name>MATERIAL_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>MATERIAL</name>
           <schemaName>SCHEMA1</schemaName>

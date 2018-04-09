@@ -18,6 +18,22 @@
       <notNull>true</notNull>
     </column>
     <column>
+      <name>DESCRIPCION</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">40</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <default class="java.lang.String">&apos;&apos;</default>
+      <notNull>true</notNull>
+    </column>
+    <column>
       <name>ID_REGISTRO</name>
       <dataTypeUsage>
         <attributeValues>

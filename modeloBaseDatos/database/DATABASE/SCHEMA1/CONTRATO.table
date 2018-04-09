@@ -3,6 +3,21 @@
   <name>CONTRATO</name>
   <columns>
     <column>
+      <name>ID_CONTRATO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
       <name>ID_CLIENTE</name>
       <dataTypeUsage>
         <attributeValues>
@@ -31,6 +46,21 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+    </column>
+    <column>
+      <name>PLAZO_MESES</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMERIC</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -86,17 +116,7 @@
       <name>PK_CONTRATO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_CLIENTE</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>CONTRATO</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROYECTO</name>
+          <name>ID_CONTRATO</name>
           <parent class="oracle.javatools.db.NameBasedID">
             <name>CONTRATO</name>
             <schemaName>SCHEMA1</schemaName>
@@ -108,7 +128,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>CONTRATO_PK</name>
+        <name>PK_CONTRATO</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>CONTRATO</name>
           <schemaName>SCHEMA1</schemaName>
@@ -173,14 +193,10 @@
   </constraints>
   <indexes>
     <index>
-      <name>CONTRATO_PK</name>
+      <name>PK_CONTRATO</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_CLIENTE</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-        <columnExpression>
-          <expressionSource>ID_PROYECTO</expressionSource>
+          <expressionSource>ID_CONTRATO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

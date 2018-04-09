@@ -1,24 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>EMAIL_PROVEEDOR</name>
+  <name>CUENTAS_POR_COBRAR</name>
   <columns>
     <column>
-      <name>CORREO</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">50</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>ID_PROVEEDOR</name>
+      <name>ID_CONTRATO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -31,6 +16,51 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+    </column>
+    <column>
+      <name>ESTADO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">1</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <name>MONTO_TOTAL</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">10</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMERIC</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+    </column>
+    <column>
+      <name>MONTO_PAGADO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">10</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMERIC</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -45,7 +75,7 @@
           <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
+      <notNull>false</notNull>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -54,7 +84,7 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
+      <notNull>false</notNull>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -69,7 +99,7 @@
           <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
+      <notNull>false</notNull>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -78,17 +108,17 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
+      <notNull>false</notNull>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_EMAIL</name>
+      <name>CUENTA_PK</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CORREO</name>
+          <name>ID_CONTRATO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>EMAIL_PROVEEDOR</name>
+            <name>CUENTAS_POR_COBRAR</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -98,9 +128,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>EMAIL_PK</name>
+        <name>CUENTA_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>EMAIL_PROVEEDOR</name>
+          <name>CUENTAS_POR_COBRAR</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -109,12 +139,12 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_EMAIL_PROV_ID_PROVEEDOR</name>
+      <name>FK_CNT_CONT_ID_CONTRATO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
+          <name>ID_CONTRATO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>EMAIL_PROVEEDOR</name>
+            <name>CUENTAS_POR_COBRAR</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -124,9 +154,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PK_PROVEEDOR</name>
+        <name>PK_CONTRATO</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVEEDOR</name>
+          <name>CONTRATO</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -135,22 +165,17 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_EMAIL_PROV_FCH_REGISTRO</name>
-      <checkCondition>FECHA_REGISTRO= GETDATE()</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_EMAIL_PROV_FCH_ULT_MOD</name>
-      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
+      <name>CK_CNT_ESTADO</name>
+      <checkCondition>ESTADO = &apos;P&apos; OR ESTADO = &apos;C&apos;</checkCondition>
       <enabled>true</enabled>
     </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>EMAIL_PK</name>
+      <name>CUENTA_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>CORREO</expressionSource>
+          <expressionSource>ID_CONTRATO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

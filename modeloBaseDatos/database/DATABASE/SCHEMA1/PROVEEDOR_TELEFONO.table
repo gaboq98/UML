@@ -1,24 +1,24 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>EMAIL_EMPLEADO</name>
+  <name>PROVEEDOR_TELEFONO</name>
   <columns>
     <column>
-      <name>CORREO</name>
+      <name>TELEFONO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
-            <key>size</key>
-            <value class="java.lang.Long">30</value>
+            <key>precision</key>
+            <value class="java.lang.String">8</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>NUMERIC</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
     </column>
     <column>
-      <name>ID_EMPLEADO</name>
+      <name>ID_PROVEEDOR</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -37,15 +37,15 @@
       <dataTypeUsage>
         <attributeValues>
           <entry>
-            <key>size</key>
-            <value class="java.lang.Long">6</value>
+            <key>precision</key>
+            <value class="java.lang.String">6</value>
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>NUMBER</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
+      <notNull>false</notNull>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -54,7 +54,7 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
+      <notNull>false</notNull>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -69,7 +69,7 @@
           <typeName>VARCHAR2</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
+      <notNull>false</notNull>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -78,17 +78,17 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>true</notNull>
+      <notNull>false</notNull>
     </column>
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_EMAIL_EMPLEADO</name>
+      <name>PK_TELEFONO_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CORREO</name>
+          <name>TELEFONO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>EMAIL_EMPLEADO</name>
+            <name>PROVEEDOR_TELEFONO</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -98,9 +98,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>EMAIL_EMPLEADO_PK</name>
+        <name>TELEFONO_PROVEEDOR_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>EMAIL_EMPLEADO</name>
+          <name>PROVEEDOR_TELEFONO</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -109,12 +109,12 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_EMAIL_EMP_EMP_ID_EMPLEADO</name>
+      <name>FK_TEL_PROV_ID_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_EMPLEADO</name>
+          <name>ID_PROVEEDOR</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>EMAIL_EMPLEADO</name>
+            <name>PROVEEDOR_TELEFONO</name>
             <schemaName>SCHEMA1</schemaName>
             <type>TABLE</type>
           </parent>
@@ -124,9 +124,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PK_EMPLEADO</name>
+        <name>PK_PROVEEDOR</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>EMPLEADO</name>
+          <name>PROVEEDOR</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -134,23 +134,13 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_EMAIL_EMP_FCH_REGISTRO</name>
-      <checkCondition>FECHA_REGISTRO= GETDATE()</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_EMAIL_EMP_FCH_ULT_MOD</name>
-      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>EMAIL_EMPLEADO_PK</name>
+      <name>TELEFONO_PROVEEDOR_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>CORREO</expressionSource>
+          <expressionSource>TELEFONO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
