@@ -1,0 +1,190 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BE8F4C64-D6D8-AB6F-9768-6C1187B17C2B" name="EMPLEADO">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>3CE0A79E-CE83-277D-4137-2A8EDBFCB002</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID EMPLEADO" id="B0300093-07B7-D924-4D5F-D13C71866350">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>8C32BB92-0AC5-55E0-3779-EB7077B3D8A5</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>51E71617-CD20-BA30-C2F4-10210E2936E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CEDULA" id="9A07601E-8177-F976-A051-0ECF067927A5">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>FCAA9C0F-E206-5EBC-B0D2-9A835B39CB30</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>37F2204A-7CB3-452B-63A0-B90DA25A063C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA INGRESO" id="CB7D184C-A0F3-3D1A-0279-030027277DA5">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>9D6DAE6F-31CC-E1F2-F196-F356B32262B9</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>466FB1EA-78F1-7804-4450-21B305A189E0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NOMBRE" id="3DCEA9B4-77D7-1267-C6AA-8846F864AAF8">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>0A255C5B-ED49-E158-8A1F-08436C2561AF</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>59666F30-42DC-5B70-F4DF-86278E8561E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TELEFONO" id="53C8B5B1-8007-8F63-14AB-79452CB5A651">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>531198FC-173F-D2A6-EE57-C75CC4E930B4</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>F29CA653-7555-4D17-5759-31E756EC251B</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DIRECCION" id="81708CB6-24F6-BE55-8667-CB801922EAE1">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>FC728FA4-31A2-B655-E68D-8FE5405B9888</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B94B9B09-F5EA-F46A-D110-9F2A446BCD28</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID REGISTRO" id="0D85B31F-CAE0-4A38-D424-900417FF4C32">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>5574FDF2-05C6-EDDB-70C5-979820B21999</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>51E71617-CD20-BA30-C2F4-10210E2936E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA REGISTRO" id="9CFA514F-4E14-9BAB-F34A-789D720D16C0">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>E11A598C-E6E3-9F69-10E2-40BA098C11F6</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>466FB1EA-78F1-7804-4450-21B305A189E0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID ULT MOD" id="3A29E573-EEEB-0AAC-1CFF-0D2C1D61BCC2">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>7915E2EA-62EF-C00D-556F-3E3151374F0B</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>51E71617-CD20-BA30-C2F4-10210E2936E7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FECHA ULT MOD" id="814076AC-F60F-31E1-5CA0-7DDFE3269CF2">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>71EEF543-7FF2-C903-C010-9F48610D70E5</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>466FB1EA-78F1-7804-4450-21B305A189E0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F77EB386-505C-5B88-4DC8-30AF5E91EBDC" name="PK EMPLEADO">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>9A46F070-9B3A-098F-5B59-7A845DC91183</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B0300093-07B7-D924-4D5F-D13C71866350</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="F3268971-EDF9-8F94-7BCA-0713E19C6881" name="UK CEDULA">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-09 23:52:07 UTC</createdTime>
+<generatorID>6813F210-585A-6548-E033-2A44833F861B</generatorID>
+<ownerDesignName>Diagrama de clases</ownerDesignName>
+<engineerTo>
+<item key="1851B823-22D9-247A-9352-35483D4A2003" value="true"/>
+<item key="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>9A07601E-8177-F976-A051-0ECF067927A5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
