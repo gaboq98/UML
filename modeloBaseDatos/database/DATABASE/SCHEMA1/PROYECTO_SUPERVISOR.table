@@ -21,7 +21,7 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -36,7 +36,7 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -48,7 +48,8 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <default class="java.lang.String">2020-12-31</default>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -60,10 +61,10 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -72,7 +73,8 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <default class="java.lang.String">GetDate()</default>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -84,10 +86,10 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -96,10 +98,47 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <default class="java.lang.String">GetDate()</default>
+      <notNull>true</notNull>
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PROYECTO_SUPERVISOR_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>FECHA_INICIO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROYECTO_SUPERVISOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_EMPLEADO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROYECTO_SUPERVISOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>PROYECTO_SUPERVISOR_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROYECTO_SUPERVISOR</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>PROYECTO_SUPERVISOR_FK1</name>
       <columnIDs>
@@ -151,42 +190,6 @@
         <schemaName>SCHEMA1</schemaName>
         <type>CONSTRAINT</type>
       </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PROYECTO_SUPERVISOR_PK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>FECHA_INICIO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROYECTO_SUPERVISOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_EMPLEADO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROYECTO_SUPERVISOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PROYECTO_SUPERVISOR_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROYECTO_SUPERVISOR</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
     </constraint>
   </constraints>
   <indexes>

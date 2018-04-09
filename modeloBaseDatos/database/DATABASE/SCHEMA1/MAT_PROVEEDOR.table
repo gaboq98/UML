@@ -12,7 +12,7 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -27,7 +27,7 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -42,7 +42,7 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -66,7 +66,7 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -82,6 +82,42 @@
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PK_MAT_PROVEEDOR</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MAT_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MAT_PROVEEDOR</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>MAT_PROOVEDOR_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>MAT_PROVEEDOR</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>FK_MAT_PROV_MAT_CODIGO</name>
       <columnIDs>
@@ -133,42 +169,6 @@
         <schemaName>SCHEMA1</schemaName>
         <type>CONSTRAINT</type>
       </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_MAT_PROVEEDOR</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>MAT_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>MAT_PROVEEDOR</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>MAT_PROOVEDOR_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>MAT_PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
     </constraint>
   </constraints>
   <indexes>

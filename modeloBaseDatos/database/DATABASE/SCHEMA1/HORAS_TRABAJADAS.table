@@ -12,7 +12,7 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -27,7 +27,7 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
@@ -45,7 +45,8 @@
           <typeName>NUMERIC</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <default class="java.lang.String">1</default>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>QUINCENA</name>
@@ -69,6 +70,7 @@
           <typeName>CHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
+      <default class="java.lang.String">&apos;P&apos;</default>
       <notNull>true</notNull>
     </column>
     <column>
@@ -81,10 +83,10 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -93,7 +95,8 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <default class="java.lang.String">getdate()</default>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -105,10 +108,10 @@
           </entry>
         </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <notNull>true</notNull>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -117,7 +120,8 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <notNull>false</notNull>
+      <default class="java.lang.String">getdate()</default>
+      <notNull>true</notNull>
     </column>
   </columns>
   <constraints>
@@ -140,32 +144,6 @@
         <name>PK_EMPLEADO</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>EMPLEADO</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_H_TRAB_PRY_ID_PROYECTO</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROYECTO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>HORAS_TRABAJADAS</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>UK_EMP_PRY_ID_PROYECTO</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>EMPLEADO_PROYECTO</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
