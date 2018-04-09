@@ -63,7 +63,7 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>ID_P_REGISTRO</name>
+      <name>ID_REGISTRO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -87,7 +87,7 @@
       <notNull>false</notNull>
     </column>
     <column>
-      <name>ID_P_U_MOD</name>
+      <name>ID_U_MOD</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -113,17 +113,17 @@
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>PROVEEDOR_FCH_REGISTRO_CK</name>
+      <name>CK_PROV_FCH_REGISTRO</name>
       <checkCondition>FECHA_REGISTRO = getdate()</checkCondition>
       <enabled>true</enabled>
     </constraint>
     <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>PROVEEDOR_FCH_U_MOD_CK</name>
+      <name>CK_PROV_FCH_U_MOD</name>
       <checkCondition>FECHA_ULT_MOD = getdate()</checkCondition>
       <enabled>true</enabled>
     </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PROVEEDOR_PK</name>
+      <name>PK_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_PROVEEDOR</name>
@@ -149,7 +149,7 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>PROVEEDOR_CED_UK</name>
+      <name>UK_PROV_CED</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>CEDULA</name>

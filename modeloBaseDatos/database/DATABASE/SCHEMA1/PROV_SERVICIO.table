@@ -33,7 +33,7 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>ID_P_REGISTRO</name>
+      <name>ID_REGISTRO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -57,7 +57,7 @@
       <notNull>false</notNull>
     </column>
     <column>
-      <name>ID_P_ULT_MOD</name>
+      <name>ID_ULT_MOD</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -83,43 +83,17 @@
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>PROV_SRVC_FCH_REGISTRO_CHK</name>
+      <name>CK_PROV_SRVC_FCH_REGISTRO</name>
       <checkCondition>FECHA_REGISTRO = GETDATE()</checkCondition>
       <enabled>true</enabled>
     </constraint>
     <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>PROV_SRVC_FCH_ULT_MOD_CHK</name>
+      <name>CK_PROV_SRVC_FCH_ULT_MOD</name>
       <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
       <enabled>true</enabled>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>ID_PROV_SERVICIO_PROVEEDOR_FK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROV_SERVICIO</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROVEEDOR_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVEEDOR</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>PROV_CODIGO_SERVICIO_FK</name>
+      <name>FK_PROV_SRVC_CODIGO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>CODIGO</name>
@@ -134,9 +108,35 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>SERVICIOS_AD_PK</name>
+        <name>PK_SERVICIO</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>SERVICIOS_AD</name>
+          <name>SERVICIO</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FK_PROV_SRVC_ID_PROVEEDOR</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROV_SERVICIO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PK_PROVEEDOR</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROVEEDOR</name>
           <schemaName>SCHEMA1</schemaName>
           <type>TABLE</type>
         </parent>
@@ -145,7 +145,7 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PROV_SERVICIO_PK</name>
+      <name>PK_PROV_SERVICIO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>CODIGO</name>
@@ -180,58 +180,6 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>ID_PROV_PROV_SERVICIO_UK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROV_SERVICIO</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PROV_SERVICIO_UK2</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROV_SERVICIO</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
-    <constraint class="oracle.javatools.db.UniqueConstraint">
-      <name>PROV_CODIGO_SERVICIO_UK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROV_SERVICIO</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PROV_SERVICIO_UK1</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROV_SERVICIO</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
   </constraints>
   <indexes>
     <index>
@@ -241,34 +189,6 @@
           <expressionSource>CODIGO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
-        <columnExpression>
-          <expressionSource>ID_PROVEEDOR</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SCHEMA1</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-    <index>
-      <name>PROV_SERVICIO_UK1</name>
-      <columnExpressions>
-        <columnExpression>
-          <expressionSource>CODIGO</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-      </columnExpressions>
-      <indexType>UNIQUE</indexType>
-      <schema>
-        <name>SCHEMA1</name>
-      </schema>
-      <systemGenerated>true</systemGenerated>
-    </index>
-    <index>
-      <name>PROV_SERVICIO_UK2</name>
-      <columnExpressions>
         <columnExpression>
           <expressionSource>ID_PROVEEDOR</expressionSource>
           <orderType>ASC</orderType>

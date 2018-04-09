@@ -33,22 +33,7 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>ID_P_REGISTRO</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">6</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR2</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>ID_P_ULT_MOD</name>
+      <name>ID_REGISTRO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -72,6 +57,21 @@
       <notNull>true</notNull>
     </column>
     <column>
+      <name>ID_ULT_MOD</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+    </column>
+    <column>
       <name>FECHA_ULT_MOD</name>
       <dataTypeUsage>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
@@ -83,7 +83,7 @@
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>EMAIL_PK</name>
+      <name>PK_EMAIL</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>CORREO</name>
@@ -109,7 +109,7 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>EMAIL_PROVEEDOR_FK1</name>
+      <name>FK_EMAIL_PROV_ID_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_PROVEEDOR</name>
@@ -124,7 +124,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROVEEDOR_PK</name>
+        <name>PK_PROVEEDOR</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>PROVEEDOR</name>
           <schemaName>SCHEMA1</schemaName>
@@ -135,12 +135,12 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>EMAIL_PROV_FCH_REGISTRO_CK</name>
+      <name>CK_EMAIL_PROV_FCH_REGISTRO</name>
       <checkCondition>FECHA_REGISTRO= GETDATE()</checkCondition>
       <enabled>true</enabled>
     </constraint>
     <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>EMAIL_PROV_FCH_ULT_MOD_CK</name>
+      <name>CK_EMAIL_PROV_FCH_ULT_MOD</name>
       <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
       <enabled>true</enabled>
     </constraint>

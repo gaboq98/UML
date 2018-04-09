@@ -72,7 +72,7 @@
       <notNull>true</notNull>
     </column>
     <column>
-      <name>ID_P_REGISTRO</name>
+      <name>ID_REGISTRO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -96,7 +96,7 @@
       <notNull>false</notNull>
     </column>
     <column>
-      <name>ID_P_ULT_MOD</name>
+      <name>ID_ULT_MOD</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -122,7 +122,7 @@
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>FACTURA_PK</name>
+      <name>PK_FACTURA</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_FACTURA</name>
@@ -148,7 +148,7 @@
       </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FACTURA_EMPLEADO_FK</name>
+      <name>FK_FACT_EMPL_ID_EMPLEADO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_EMPLEADO</name>
@@ -163,7 +163,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>EMPLEADO_PK</name>
+        <name>PK_EMPLEADO</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>EMPLEADO</name>
           <schemaName>SCHEMA1</schemaName>
@@ -174,7 +174,7 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FACTURA_PROVEEDOR_FK</name>
+      <name>FK_FACT_PROV_ID_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_PROVEEDOR</name>
@@ -189,7 +189,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROVEEDOR_PK</name>
+        <name>PK_PROVEEDOR</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>PROVEEDOR</name>
           <schemaName>SCHEMA1</schemaName>
@@ -200,7 +200,7 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FACTURA_PROYECTO_FK</name>
+      <name>FK_FACT_PRY_ID_PROYECTO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_PROYECTO</name>
@@ -215,7 +215,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PROYECTO_PK</name>
+        <name>PK_PROYECTO</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>PROYECTO</name>
           <schemaName>SCHEMA1</schemaName>
@@ -226,12 +226,12 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>FACTURA_FCH_CHK</name>
+      <name>CK_FACTURA_FCH</name>
       <checkCondition>FECHA = getdate()</checkCondition>
       <enabled>true</enabled>
     </constraint>
     <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>FACTURA_ULT_MOD_CHK</name>
+      <name>CK_FACTURA_ULT_MOD</name>
       <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
       <enabled>true</enabled>
     </constraint>

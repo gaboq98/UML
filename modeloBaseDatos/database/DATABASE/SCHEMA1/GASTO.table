@@ -59,33 +59,7 @@
   </columns>
   <constraints>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>GASTO_EMPLEADO_PROYECTO_FK1</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROYECTO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>GASTO</name>
-            <schemaName>SCHEMA1</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>EMPLEADO_PROYECTO_UK1</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>EMPLEADO_PROYECTO</name>
-          <schemaName>SCHEMA1</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>GASTO_EMPLEADO_PROYECTO_FK2</name>
+      <name>FK_GST_EMP_ID_EMPLEADO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_EMPLEADO</name>
@@ -100,7 +74,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>EMPLEADO_PROYECTO_UK2</name>
+        <name>UK_EMP_PRY_ID_EMPLEADO</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>EMPLEADO_PROYECTO</name>
           <schemaName>SCHEMA1</schemaName>
@@ -111,7 +85,7 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>GASTO_FACTURA_FK1</name>
+      <name>FK_GST_FACT_ID_FACTURA</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_FACTURA</name>
@@ -126,7 +100,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>FACTURA_PK</name>
+        <name>PK_FACTURA</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>FACTURA</name>
           <schemaName>SCHEMA1</schemaName>
@@ -137,7 +111,33 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>GASTO_QUINCENA_FK1</name>
+      <name>FK_GST_PRY_ID_PROYECTO</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROYECTO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>GASTO</name>
+            <schemaName>SCHEMA1</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>SCHEMA1</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>UK_EMP_PRY_ID_PROYECTO</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>EMPLEADO_PROYECTO</name>
+          <schemaName>SCHEMA1</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FK_GST_QUINCENA</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>FINAL</name>
@@ -152,7 +152,7 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>QUINCENA_PK</name>
+        <name>PK_QUINCENA</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>QUINCENA</name>
           <schemaName>SCHEMA1</schemaName>
