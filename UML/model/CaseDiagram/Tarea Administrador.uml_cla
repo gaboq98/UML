@@ -17,6 +17,12 @@
   <useCase href='urn:uuid:43a0c779-cdcc-4c75-940c-75c2edf13aa5'/>
   <useCase href='urn:uuid:cf7fe5f6-ae08-4390-984c-7149c5c3006c'/>
   <useCase href='urn:uuid:c17321eb-0225-4aa8-9403-c573320ffe0a'/>
+  <useCase href='urn:uuid:0b63a92c-50b6-4402-a0c7-8becbb36a642'/>
+  <useCase href='urn:uuid:e332dc9d-6f0b-43a7-8c07-32a8467c48e2'/>
+  <useCase href='urn:uuid:c036bfd7-1808-4a9d-9232-3f4dcb191a36'/>
+  <useCase href='urn:uuid:da685cde-dee0-4f7b-a093-13d161f70b58'/>
+  <useCase href='urn:uuid:9a85b4fb-5949-4612-9de7-a575eb165081'/>
+  <useCase href='urn:uuid:e6474c11-3cbf-4f6a-8891-c0a222e2e017'/>
   <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:617fd566-0012-420a-b907-13ef88c2e9c3'
     isDerived='false'
     isDerivedUnion='false'
