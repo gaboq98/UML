@@ -28,6 +28,8 @@
 <ownerDesignName>Diagrama de clases</ownerDesignName>
 <importedID>D0C0E198-E82D-3A22-1A33-8290303F36A9</importedID>
 <use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1531DA55-EC04-A5BD-ED91-8766801C0F48</domain>
 <usesDefaultValue>true</usesDefaultValue>
 <defaultValue>&apos;Sin Descripcion&apos;</defaultValue>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
