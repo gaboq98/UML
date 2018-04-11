@@ -41,12 +41,6 @@
    <source href='urn:uuid:ea27571d-71dd-4c1a-9350-6f74ebfdf33c'/>
    <target href='urn:uuid:be6a4111-bbbd-41bf-884e-2f86daa79d96'/>
   </edge>
-  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:af2ad868-6d79-44df-9d70-f015be3d7315'
-    isLeaf='false'
-    name='ControlFlow6'>
-   <source href='urn:uuid:be6a4111-bbbd-41bf-884e-2f86daa79d96'/>
-   <target href='urn:uuid:6f32af76-f619-447d-86b5-401a40bfcc86'/>
-  </edge>
   <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:846a0fbf-dcc8-4f43-bf98-3632611f4b9d'
     isLeaf='false'
     name='ControlFlow7'>
@@ -163,29 +157,35 @@
    <source href='urn:uuid:94b2e9a9-4821-4da8-9743-3542ce5ad147'/>
    <target href='urn:uuid:d31b917d-b46c-454b-b619-aa3440163073'/>
   </edge>
-  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:14ac790d-7685-45ee-8016-ab34a8dcb1e0'
-    isLeaf='false'
-    name='ControlFlow27'>
-   <source href='urn:uuid:fd488c42-7c3b-4921-b816-e78417395681'/>
-   <target href='urn:uuid:5c0e2487-c07d-495c-bf7e-2fea90f18366'/>
-  </edge>
-  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:24c50627-977a-4094-a62a-803f197f4f33'
-    isLeaf='false'
-    name='ControlFlow28'>
-   <source href='urn:uuid:5c0e2487-c07d-495c-bf7e-2fea90f18366'/>
-   <target href='urn:uuid:bfb72bed-4b60-4b5a-a9e1-b2b4f7154e83'/>
-  </edge>
-  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:48b5f130-4734-4956-8301-ff0380821b8a'
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:9687f1e3-a063-4848-9043-a481c2b11e9d'
     isLeaf='false'
     name='ControlFlow19'>
    <source href='urn:uuid:66ccf755-f329-484a-ba7c-115d88807298'/>
    <target href='urn:uuid:1cbd1630-7885-45fd-acb4-c00134610ed9'/>
   </edge>
-  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:82c329ed-bb1a-4b5b-beae-d86abe0e5c17'
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:cd21094f-6a82-48d5-af6c-5009f1711efe'
     isLeaf='false'
     name='ControlFlow29'>
    <source href='urn:uuid:1cbd1630-7885-45fd-acb4-c00134610ed9'/>
    <target href='urn:uuid:cdb956fa-71bb-40aa-8e91-4840b3170044'/>
+  </edge>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:3a43c5c6-1461-4ea3-beb2-dfdd6cb954cb'
+    isLeaf='false'
+    name='ControlFlow6'>
+   <source href='urn:uuid:be6a4111-bbbd-41bf-884e-2f86daa79d96'/>
+   <target href='urn:uuid:6f32af76-f619-447d-86b5-401a40bfcc86'/>
+  </edge>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:23c9aa56-681b-4ece-b5f5-b4f103ce654c'
+    isLeaf='false'
+    name='ControlFlow27'>
+   <source href='urn:uuid:fd488c42-7c3b-4921-b816-e78417395681'/>
+   <target href='urn:uuid:5c0e2487-c07d-495c-bf7e-2fea90f18366'/>
+  </edge>
+  <edge xmi:type='uml:ControlFlow' xmi:uuid='urn:uuid:5987f7a6-b067-447f-85c2-6a6abfaeb088'
+    isLeaf='false'
+    name='ControlFlow28'>
+   <source href='urn:uuid:5c0e2487-c07d-495c-bf7e-2fea90f18366'/>
+   <target href='urn:uuid:bfb72bed-4b60-4b5a-a9e1-b2b4f7154e83'/>
   </edge>
   <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:090aa5fc-5c12-4ff4-985f-b0fa32000074'
     isLeaf='false'
@@ -218,7 +218,7 @@
     isLocallyReentrant='false'
     name='Elegir Cantidad'>
    <incoming href='urn:uuid:c2ad9663-2dd3-4358-9a09-09e4e5955ab9'/>
-   <outgoing href='urn:uuid:af2ad868-6d79-44df-9d70-f015be3d7315'/>
+   <outgoing href='urn:uuid:3a43c5c6-1461-4ea3-beb2-dfdd6cb954cb'/>
   </node>
   <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:a778c793-e414-4a9b-b0df-239877106bd2'
     isLeaf='false'
@@ -240,8 +240,8 @@
     isCombineDuplicate='true'
     isLeaf='false'
     name='AndNode1'>
-   <incoming href='urn:uuid:af2ad868-6d79-44df-9d70-f015be3d7315'/>
    <incoming href='urn:uuid:846a0fbf-dcc8-4f43-bf98-3632611f4b9d'/>
+   <incoming href='urn:uuid:3a43c5c6-1461-4ea3-beb2-dfdd6cb954cb'/>
    <outgoing href='urn:uuid:129c14c9-4127-4299-b9dc-f8a726fc160c'/>
   </node>
   <node xmi:type='uml:MergeNode' xmi:uuid='urn:uuid:c1c762d9-a573-4605-9557-25d7ffbae5f4'
@@ -275,7 +275,7 @@
   <node xmi:type='uml:FlowFinalNode' xmi:uuid='urn:uuid:bfb72bed-4b60-4b5a-a9e1-b2b4f7154e83'
     isLeaf='false'
     name='FlowFinalNode1'>
-   <incoming href='urn:uuid:24c50627-977a-4094-a62a-803f197f4f33'/>
+   <incoming href='urn:uuid:5987f7a6-b067-447f-85c2-6a6abfaeb088'/>
   </node>
   <node xmi:type='uml:InitialNode' xmi:uuid='urn:uuid:6393cd33-0376-4556-aaf3-4511f3526db1'
     isLeaf='false'
@@ -310,7 +310,7 @@
     isLocallyReentrant='false'
     name='Registrar Cambio'>
    <incoming href='urn:uuid:6a1c7317-3dfa-40ed-8d31-a264ceaa600d'/>
-   <outgoing href='urn:uuid:48b5f130-4734-4956-8301-ff0380821b8a'/>
+   <outgoing href='urn:uuid:9687f1e3-a063-4848-9043-a481c2b11e9d'/>
   </node>
   <node xmi:type='uml:FlowFinalNode' xmi:uuid='urn:uuid:a9dbf058-c02d-4b11-a6c5-9a73c423b4d8'
     isLeaf='false'
@@ -351,7 +351,7 @@
   <node xmi:type='uml:DecisionNode' xmi:uuid='urn:uuid:cdb956fa-71bb-40aa-8e91-4840b3170044'
     isLeaf='false'
     name='OrNode6'>
-   <incoming href='urn:uuid:82c329ed-bb1a-4b5b-beae-d86abe0e5c17'/>
+   <incoming href='urn:uuid:cd21094f-6a82-48d5-af6c-5009f1711efe'/>
    <outgoing href='urn:uuid:6ae3d3d3-d327-4fbd-b6a5-f5d8ad054d19'/>
    <outgoing href='urn:uuid:77992bf5-c5da-48c8-9fc6-80177ba91431'/>
   </node>
@@ -360,21 +360,21 @@
     isLocallyReentrant='false'
     name='Registar Cambio'>
    <incoming href='urn:uuid:f03fbcef-9ff1-4853-b925-c82701d5b63c'/>
-   <outgoing href='urn:uuid:14ac790d-7685-45ee-8016-ab34a8dcb1e0'/>
+   <outgoing href='urn:uuid:23c9aa56-681b-4ece-b5f5-b4f103ce654c'/>
   </node>
   <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:5c0e2487-c07d-495c-bf7e-2fea90f18366'
     isLeaf='false'
     isLocallyReentrant='false'
     name='Registrar Gasto por quincena'>
-   <incoming href='urn:uuid:14ac790d-7685-45ee-8016-ab34a8dcb1e0'/>
-   <outgoing href='urn:uuid:24c50627-977a-4094-a62a-803f197f4f33'/>
+   <incoming href='urn:uuid:23c9aa56-681b-4ece-b5f5-b4f103ce654c'/>
+   <outgoing href='urn:uuid:5987f7a6-b067-447f-85c2-6a6abfaeb088'/>
   </node>
   <node xmi:type='uml:OpaqueAction' xmi:uuid='urn:uuid:1cbd1630-7885-45fd-acb4-c00134610ed9'
     isLeaf='false'
     isLocallyReentrant='false'
     name='Registrar Gasto por quincena'>
-   <incoming href='urn:uuid:48b5f130-4734-4956-8301-ff0380821b8a'/>
-   <outgoing href='urn:uuid:82c329ed-bb1a-4b5b-beae-d86abe0e5c17'/>
+   <incoming href='urn:uuid:9687f1e3-a063-4848-9043-a481c2b11e9d'/>
+   <outgoing href='urn:uuid:cd21094f-6a82-48d5-af6c-5009f1711efe'/>
   </node>
  </uml:Activity>
 </xmi:XMI>

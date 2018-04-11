@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<xmi:XMI xmlns:xmi='http://www.omg.org/spec/XMI/20131001' xmlns:uml='http://www.omg.org/spec/UML/20131001'>
+ <documentation exporter='Oracle JDeveloper' exporterVersion='12.2.1.3.0'/>
+ <uml:UseCase xmi:type='uml:UseCase' xmi:uuid='urn:uuid:429998f5-6c4d-48d2-ade7-4ea6b8f6086b'
+   isAbstract='false'
+   isFinalSpecialization='false'
+   isLeaf='false'
+   name='Registrar Contrato'
+   visibility='public'>
+  <subject href='urn:uuid:3b4f65f2-039c-4333-b97f-efe8c25c5ffd'/>
+  <include xmi:type='uml:Include' xmi:uuid='urn:uuid:82d89d2a-6ec6-4f40-8bba-9760f3fa9fb2'>
+   <addition href='urn:uuid:62974bf9-a058-464d-a397-7d83654cf258'/>
+  </include>
+ </uml:UseCase>
+</xmi:XMI>

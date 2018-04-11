@@ -23,6 +23,7 @@
   <useCase href='urn:uuid:da685cde-dee0-4f7b-a093-13d161f70b58'/>
   <useCase href='urn:uuid:9a85b4fb-5949-4612-9de7-a575eb165081'/>
   <useCase href='urn:uuid:e6474c11-3cbf-4f6a-8891-c0a222e2e017'/>
+  <useCase href='urn:uuid:429998f5-6c4d-48d2-ade7-4ea6b8f6086b'/>
   <ownedAttribute xmi:type='uml:Property' xmi:uuid='urn:uuid:617fd566-0012-420a-b907-13ef88c2e9c3'
     isDerived='false'
     isDerivedUnion='false'
