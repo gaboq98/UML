@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_EMP_PRY_ID_EMPLEADO" directorySegmentName="seg_0" id="120B7A26-E42C-4DDB-0CE1-CA391695730A">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:43:52 UTC</createdTime>
+<generatorID>FA84824A-7799-2874-3FEE-3794DA240040</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="72957ED7-6238-A75E-1989-79AD1AEEB885" value="true"/>
+<item key="082DF22B-4B79-788B-F99B-E3C22697C981" value="true"/>
+</engineerTo>
+<sourcePk>4120100A-ACBF-059C-34F6-EAED4B6DE85F</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9E3FAA30-A389-0B7D-87DC-E9052A7D8543</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>11495826-BE33-38F5-9D21-8434BAEC917E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -389,7 +389,7 @@
 	<model_compare_storage_props_filter>
 	</model_compare_storage_props_filter>
 	<naming_options>
-		<model_options objectid="1851B823-22D9-247A-9352-35483D4A2003">
+		<model_options objectid="082DF22B-4B79-788B-F99B-E3C22697C981">
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Table" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Column" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.TableView" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
@@ -397,7 +397,7 @@
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Index" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
 		</model_options>
-		<model_options objectid="BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1">
+		<model_options objectid="72957ED7-6238-A75E-1989-79AD1AEEB885">
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Table" max_name_length="128" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Column" max_name_length="128" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.TableView" max_name_length="128" case_type="2" valid_characters="" all_valid="true" />
@@ -405,7 +405,7 @@
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" max_name_length="128" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Index" max_name_length="128" case_type="2" valid_characters="" all_valid="true" />
 		</model_options>
-		<model_options objectid="78CAAD17-954C-9470-FDF6-9C1E40C1A320">
+		<model_options objectid="46803043-20C7-780B-9776-1124072D5A9A">
 			<naming_option class_name="oracle.dbtools.crest.model.design.logical.Entity" max_name_length="254" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.logical.Attribute" max_name_length="254" case_type="2" valid_characters="" all_valid="true" />
 			<naming_option class_name="oracle.dbtools.crest.model.design.logical.EntityView" max_name_length="254" case_type="2" valid_characters="" all_valid="true" />
@@ -438,7 +438,7 @@
 				<arcs value="70"/>
 			</relational_model_0_estimates>
 			<relational_model_1_estimates>
-				<relational_model_name value="script_JDeveloper"/>
+				<relational_model_name value="script_JDeveloper_Oracle"/>
 				<tables value="70"/>
 				<views value="70"/>
 				<foreign_keys value="70"/>
@@ -446,7 +446,7 @@
 				<subviews value="70"/>
 				<arcs value="70"/>
 				<physical_models_estimates>
-							<physical_model_BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1_SQL_Server_2012>
+							<physical_model_72957ED7-6238-A75E-1989-79AD1AEEB885_SQL_Server_2012>
 								<physical_model_name value="SQL Server 2012"/>
 								<data_bases value="70"/>
 								<logins value="70"/>
@@ -456,7 +456,7 @@
 								<triggers value="70"/>
 								<users value="70"/>
 								<roles value="70"/>
-							</physical_model_BCF42C9A-8EBF-50E9-0DA2-AAC3F8D153C1_SQL_Server_2012>
+							</physical_model_72957ED7-6238-A75E-1989-79AD1AEEB885_SQL_Server_2012>
 				</physical_models_estimates>
 			</relational_model_1_estimates>
 		</relational_model_estimates>

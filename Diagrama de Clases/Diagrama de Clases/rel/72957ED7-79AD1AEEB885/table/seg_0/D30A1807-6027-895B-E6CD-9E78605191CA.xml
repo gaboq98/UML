@@ -1,0 +1,174 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D30A1807-6027-895B-E6CD-9E78605191CA" name="SERV_PROVEEDOR">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>8C18EFE9-0701-9904-F25A-5796FDDC8AB6</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PROVEEDOR" id="257F3A38-3DCB-75B3-E8CE-A9C88FB70B81">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>6D76BC35-B7BF-77BD-6481-6C7A0E677442</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D5C74C3E-2959-E400-E1CA-3746142EACA1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FA79D6C8-262D-01AE-6E9E-DED867A51E41" referredColumn="B88C0E93-30BC-8A90-84CA-33580863C6D2"/>
+</associations>
+</Column>
+<Column name="CODIGO" id="8968D480-B19D-6800-6E29-10EA874FACED">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>CDFAF01F-6259-5055-D2D0-440419C964C9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D5C74C3E-2959-E400-E1CA-3746142EACA1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6A524833-8B4D-1550-E445-F92D7B716816" referredColumn="461B463A-8B3E-1BB6-CA9D-71E6836388FA"/>
+</associations>
+</Column>
+<Column name="CODIGO_SERV_PROV" id="B380A33E-E86C-3EDB-F4F8-EED0B78460F2">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>E7438E03-7E33-73E3-58C4-18D40056D1B5</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4BE7E8A9-8BF3-5D30-C849-352A3F986DD7</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_REGISTRO" id="1D98E003-B4C2-5D07-E127-124A08030FD5">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>C60310E4-B686-9B28-8674-674D7F29C45C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D5C74C3E-2959-E400-E1CA-3746142EACA1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_REGISTRO" id="5F48E844-997B-BDC7-C381-1AB128C7CB04">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>53F0690D-9633-BE13-2BEA-0BF77A0F1512</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>7F39C2AD-DA6D-5584-6900-B0F02EF75453</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>getdate()</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ULT_MOD" id="69CCEA94-26A3-5CFF-4D36-F02A49C747ED">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>D2820F28-FE77-1A96-653D-5FFEAE8FF24E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D5C74C3E-2959-E400-E1CA-3746142EACA1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_ULT_MOD" id="83B02EB1-A3D1-D09E-5F12-D593C09D2808">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>A6E6465B-6AB4-C821-7FDA-6449CA800EE4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>7F39C2AD-DA6D-5584-6900-B0F02EF75453</domain>
+<usesDefaultValue>true</usesDefaultValue>
+<defaultValue>getdate()</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ECCC6EFB-991B-4D05-7FFF-A5C3DCA450C5" name="PK_PROV_SERVICIO">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>B864D76E-201C-571F-3BF8-1D03A9F31610</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8968D480-B19D-6800-6E29-10EA874FACED"/>
+<colUsage columnID="257F3A38-3DCB-75B3-E8CE-A9C88FB70B81"/>
+<colUsage columnID="B380A33E-E86C-3EDB-F4F8-EED0B78460F2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B100024-E052-935D-1104-B8EE1B664BFF" name="SERV_PROVEEDOR_UK1">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>67E392D2-1C60-0269-4CA5-3CC3EDBFAB4C</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8968D480-B19D-6800-6E29-10EA874FACED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9F6477ED-1B72-5860-AAC2-03520DFC12B4" name="FK_PROV_SRVC_CODIGO">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8968D480-B19D-6800-6E29-10EA874FACED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AFBDB2EA-174C-CD8E-AE13-C3EBE59ACD3D" name="FK_PROV_SRVC_ID_PROVEEDOR">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="257F3A38-3DCB-75B3-E8CE-A9C88FB70B81"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="CK_PROV_SRVC_FCH_REGISTRO" directorySegmentName="seg_0" id="0F6145B3-1836-FA88-3509-4CBB604922AA">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>A2946B9A-610A-74BC-77D4-07DFD10BE8BB</importedID>
+<rule>FECHA_REGISTRO = GETDATE()</rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="CK_PROV_SRVC_FCH_ULT_MOD" directorySegmentName="seg_0" id="D2B0E8B7-BC46-FEA8-4AB8-5E123CCBA839">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>083D3341-38F4-48E3-1C76-16E1837E1CF7</importedID>
+<rule>FECHA_ULT_MOD = GETDATE()</rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

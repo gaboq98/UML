@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxySqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.TableProxySqlServerv2k5" name="MAT_PROVEEDOR" directorySegmentName="seg_0" id="2DD67650-22D7-203A-CC24-504A47DFC344">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<database>DB_NULLELEMENT</database>
+<schema>23730CC9-813F-B06B-379E-7476B70BB4CC</schema>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_ULT_MOD" id="796B825F-BB08-B12E-9E97-E831587DA287">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="FECHA_REGISTRO" id="AE149C1A-F02C-A2EB-96F9-F0199249AB4A">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="CODIGO_MAT_PROV" id="B2F0EB39-3D2B-B5A2-9B79-5D7A13920247">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_REGISTRO" id="B351C499-1C5D-A4AC-4864-6577A7F1F098">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="ID_PROVEEDOR" id="EB2839F4-18CD-0319-D15A-F1800BFF900B">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="FECHA_ULT_MOD" id="ED64BA9B-BE2C-EA63-E5E5-5A801F342E52">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k12.ColumnProxySqlServerv2k12" name="CODIGO" id="F1CE41DB-5C1C-EEF2-EBCC-D4EA6FAA3CF5">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="FK_MAT_PROV_PROV_ID_PROVEEDOR" id="0D6BDAD3-9591-7C1A-A887-7EA376151981">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>script_JDeveloper_Oracle</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.FKProxySqlServerv2k5" name="FK_MAT_PROV_MAT_CODIGO" id="5B545D07-9C15-9F2A-D717-EAEC0832A7AC">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>script_JDeveloper_Oracle</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.PKProxySqlServerv2k5" name="PK_MAT_PROVEEDOR" id="9F36FB8B-76D7-EAB0-3FEE-1BFF85341D15">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<clustered>true</clustered>
+</PrimaryKey>
+</primaryKeys>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.UniqueProxySqlServerv2k5" name="MAT_PROVEEDOR_UK1" id="2AFBC74C-C2CE-BC08-4156-42DA58CA2047">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:10 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+</UniqueKey>
+</uniqueKeys>
+</TableProxySqlServerv2k5>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="51DEA7FA-9C05-5B00-A569-B08BA304695A" containerWithKeyObject="16B0D40C-915E-58CC-8342-B011779F011D" localFKIndex="47569ED4-79BA-2C82-0090-F0127CE1EFA0" name="FK_EMAIL_PROV_ID_PROVEEDOR">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>153C2FFA-A90D-CC92-28A6-5B9C1DF534C3</importedID>
+<referredTableLongName>PROVEEDOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9C1486AE-254F-34C7-B74B-3CA55EB372B6</referredTableID>
+<keyObject>D06176A7-3C2C-6F67-6B41-7DB1549C9964</keyObject>
+<referredKeyID>D06176A7-3C2C-6F67-6B41-7DB1549C9964</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PROVEEDOR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

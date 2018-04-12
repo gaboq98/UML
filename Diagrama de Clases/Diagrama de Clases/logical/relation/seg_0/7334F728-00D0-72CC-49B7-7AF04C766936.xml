@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PROYECTO_SUPERVISOR_FK2" directorySegmentName="seg_0" id="7334F728-00D0-72CC-49B7-7AF04C766936">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:43:52 UTC</createdTime>
+<generatorID>558D1372-4EBF-9DAE-87B7-DAD1C462B6E3</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="72957ED7-6238-A75E-1989-79AD1AEEB885" value="true"/>
+<item key="082DF22B-4B79-788B-F99B-E3C22697C981" value="true"/>
+</engineerTo>
+<sourcePk>53CD1605-759F-603D-3BE5-ADB1A30ADB81</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D94D21DE-90CE-B35E-5803-D7D5E4F8791F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3C985ED2-4CAB-2E67-9D43-08FC72E9CBE8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

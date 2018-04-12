@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FA79D6C8-262D-01AE-6E9E-DED867A51E41" containerWithKeyObject="D30A1807-6027-895B-E6CD-9E78605191CA" localFKIndex="AFBDB2EA-174C-CD8E-AE13-C3EBE59ACD3D" name="FK_PROV_SRVC_ID_PROVEEDOR">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>BE5C1AD6-14AD-C545-20A1-3FCB6E86271F</importedID>
+<referredTableLongName>PROVEEDOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>9C1486AE-254F-34C7-B74B-3CA55EB372B6</referredTableID>
+<keyObject>D06176A7-3C2C-6F67-6B41-7DB1549C9964</keyObject>
+<referredKeyID>D06176A7-3C2C-6F67-6B41-7DB1549C9964</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PROVEEDOR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

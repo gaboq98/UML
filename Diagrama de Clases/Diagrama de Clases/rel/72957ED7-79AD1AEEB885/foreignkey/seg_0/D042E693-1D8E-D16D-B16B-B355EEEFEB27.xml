@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D042E693-1D8E-D16D-B16B-B355EEEFEB27" containerWithKeyObject="B2026F2D-0125-19EF-2E5B-298AE14348D6" localFKIndex="0BE3B1C7-F79F-3863-B132-3A3196CBE3D0" name="FK_FACT_PRY_ID_PROYECTO">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>3ECA0D9F-016B-65CE-CACA-6EBB99E0C7DF</importedID>
+<referredTableLongName>PROYECTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>99F98901-9558-F20E-B3C4-9B0738C8FBB4</referredTableID>
+<keyObject>8F09C9D8-94B3-3C95-AC1E-2C52D626D7EC</keyObject>
+<referredKeyID>8F09C9D8-94B3-3C95-AC1E-2C52D626D7EC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PROYECTO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

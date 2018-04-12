@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<SchemaSqlServerv2k5 class="oracle.dbtools.crest.model.design.storage.sqlserver.v2k5.SchemaSqlServerv2k5" name="SCHEMA1" directorySegmentName="seg_0" id="B8D3B5F3-D2A4-611A-1EC9-CE970FF3BBB7">
-<sourceDDLFile>script_JDeveloper.sql</sourceDDLFile>
-<createdBy>Lenovo</createdBy>
-<createdTime>2018-04-09 20:49:53 UTC</createdTime>
-<ownerDesignName>Diagrama de clases</ownerDesignName>
-<database>DB_NULLELEMENT</database>
-</SchemaSqlServerv2k5>

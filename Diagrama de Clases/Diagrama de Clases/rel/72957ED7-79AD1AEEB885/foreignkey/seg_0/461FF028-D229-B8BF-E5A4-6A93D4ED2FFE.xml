@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="461FF028-D229-B8BF-E5A4-6A93D4ED2FFE" containerWithKeyObject="F66A4CEC-0AA1-D81F-84DA-49DCD05D8ADD" localFKIndex="E6B2D6EE-EF4F-48F2-BB1F-5F771D9610BE" name="FK_L_MAT_PROV_FACT_ID_FACTURA">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>4DC582BA-0CEC-B574-887E-8845AE108936</importedID>
+<referredTableLongName>LINEA_FACTURA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B7C534EC-3C6C-3EAC-8983-CABFEE890EE6</referredTableID>
+<keyObject>67C12B94-48E3-8206-A1BC-729F78392667</keyObject>
+<referredKeyID>67C12B94-48E3-8206-A1BC-729F78392667</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_FACTURA</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

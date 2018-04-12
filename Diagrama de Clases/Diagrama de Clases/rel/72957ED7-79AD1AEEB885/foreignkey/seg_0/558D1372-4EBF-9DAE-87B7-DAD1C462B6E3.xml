@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="558D1372-4EBF-9DAE-87B7-DAD1C462B6E3" containerWithKeyObject="FC73900C-D454-ACE7-A23B-A21B16BBAC40" localFKIndex="48C64047-061A-CC71-32AE-3169632CFD22" name="PROYECTO_SUPERVISOR_FK2">
+<sourceDDLFile>script_JDeveloper_Oracle.sql</sourceDDLFile>
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:23:26 UTC</createdTime>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<importedID>F6E25A32-45F4-AD60-A9B0-4DA45E6F26BC</importedID>
+<referredTableLongName>PROYECTO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>99F98901-9558-F20E-B3C4-9B0738C8FBB4</referredTableID>
+<keyObject>8F09C9D8-94B3-3C95-AC1E-2C52D626D7EC</keyObject>
+<referredKeyID>8F09C9D8-94B3-3C95-AC1E-2C52D626D7EC</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PROYECTO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

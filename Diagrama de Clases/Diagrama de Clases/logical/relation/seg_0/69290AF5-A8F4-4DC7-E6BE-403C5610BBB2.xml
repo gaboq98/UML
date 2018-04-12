@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_MAT_PROV_MAT_CODIGO" directorySegmentName="seg_0" id="69290AF5-A8F4-4DC7-E6BE-403C5610BBB2">
+<createdBy>Lenovo</createdBy>
+<createdTime>2018-04-12 00:43:52 UTC</createdTime>
+<generatorID>85C4A577-719D-48FC-7437-2659A25A1CDB</generatorID>
+<ownerDesignName>Diagrama de Clases</ownerDesignName>
+<engineerTo>
+<item key="72957ED7-6238-A75E-1989-79AD1AEEB885" value="true"/>
+<item key="082DF22B-4B79-788B-F99B-E3C22697C981" value="true"/>
+</engineerTo>
+<sourcePk>FCB142CE-8842-112A-C50A-B6C383FF9CB4</sourcePk>
+<dominantRole>449D5967-36FA-BA6B-A9FD-1CB04576FC59</dominantRole>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>449D5967-36FA-BA6B-A9FD-1CB04576FC59</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>345CD5D7-F764-F0A9-3403-5ACCC7DD3D8C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
