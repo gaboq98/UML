@@ -16,6 +16,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Número telefónico de cada proveedor.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_PROVEEDOR</name>
@@ -31,6 +37,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Proveedor al que pertenece.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -46,6 +58,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que registró el número.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -55,6 +73,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que se registra el teléfono.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -70,6 +94,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que realizó la última modificación al teléfono.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -79,35 +109,15 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que se realizó la última modificación al teléfono.</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_TEL_PROV_ID_PROVEEDOR</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROVEEDOR_TELEFONO</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PK_PROVEEDOR</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVEEDOR</name>
-          <schemaName>CRTLADM</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <name>PK_TELEFONO_PROVEEDOR</name>
       <columnIDs>
@@ -118,7 +128,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -133,6 +143,32 @@
         <schemaName>CRTLADM</schemaName>
         <type>INDEX</type>
       </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FK_TEL_PROV_ID_PROVEEDOR</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROVEEDOR_TELEFONO</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PK_PROVEEDOR</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>SCHEMA1</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
     </constraint>
   </constraints>
   <indexes>
@@ -152,6 +188,10 @@
     </index>
   </indexes>
   <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">Tabla con los números de teléfono de cada proveedor.</value>
+    </entry>
     <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>

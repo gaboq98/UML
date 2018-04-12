@@ -16,6 +16,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Proveedor que suministra el material.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>CODIGO</name>
@@ -31,6 +37,33 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Código del material detro del catálogo de la compañía.</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>CODIGO_MAT_PROV</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Código del material dentro del catálogo del proveedor.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -46,6 +79,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que registra la relación.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -55,6 +94,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que se registra la relación.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -70,6 +115,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que realiza la última modificación a la fila.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -79,6 +130,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha de la última modificación a la fila</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
@@ -92,7 +149,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -118,7 +175,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -144,7 +201,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
         <columnID class="oracle.javatools.db.NameBasedID">
@@ -154,13 +211,49 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO_MAT_PROV</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>MAT_PROOVEDOR_PK</name>
+        <name>PK_MAT_PROVEEDOR</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>MAT_PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>MAT_PROVEEDOR_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>MAT_PROVEEDOR_UK1</name>
         <parent class="oracle.javatools.db.NameBasedID">
           <name>MAT_PROVEEDOR</name>
           <schemaName>CRTLADM</schemaName>
@@ -173,7 +266,21 @@
   </constraints>
   <indexes>
     <index>
-      <name>MAT_PROOVEDOR_PK</name>
+      <name>MAT_PROVEEDOR_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>CODIGO</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>CRTLADM</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>PK_MAT_PROVEEDOR</name>
       <columnExpressions>
         <columnExpression>
           <expressionSource>CODIGO</expressionSource>
@@ -181,6 +288,10 @@
         </columnExpression>
         <columnExpression>
           <expressionSource>ID_PROVEEDOR</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>CODIGO_MAT_PROV</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
@@ -192,6 +303,10 @@
     </index>
   </indexes>
   <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">Relación entre materiales y proveedores.</value>
+    </entry>
     <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>

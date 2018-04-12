@@ -16,6 +16,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Código del material detro del catálogo de la compañía.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_FACTURA</name>
@@ -31,6 +37,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Identificador de la factura.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_LINEA</name>
@@ -46,6 +58,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Identificador de la línea.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_PROVEEDOR</name>
@@ -76,39 +94,15 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Cantidad de material recibido.</value>
+        </entry>
+      </properties>
     </column>
     <column>
-      <name>COSTO</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>precision</key>
-            <value class="java.lang.String">10</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>NUMERIC</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>UNIDAD_MEDIDA</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Integer">5</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>CHAR</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>COSTO_TOTAL</name>
+      <name>COSTO_UNITARIO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -124,7 +118,28 @@
       <properties>
         <entry>
           <key>Comment</key>
-          <value class="java.lang.String">unidad * costo</value>
+          <value class="java.lang.String">Costo unitario.</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>UNIDAD_MEDIDA</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Integer">5</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>CHAR</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Unidad de medida del servicio.</value>
         </entry>
       </properties>
     </column>
@@ -142,6 +157,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que registra el detalle.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -151,6 +172,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en la que se inscribe el detalle.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -166,6 +193,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que realiza la última modificación.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -175,9 +208,97 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en la que se realiza la última modificación.</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PK_L_MAT_PROVEEDOR</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_FACTURA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_LINEA</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>PK_L_MAT_PROVEEDOR</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>L_MAT_PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FK_L_MAT_PROVEEDOR</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>L_MAT_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>MAT_PROVEEDOR_UK1</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>MAT_PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>FK_L_MAT_PROV_FACT_ID_FACTURA</name>
       <columnIDs>
@@ -188,7 +309,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -204,97 +325,11 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>L_MAT_PROVEEDOR_FK1</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_MAT_PROVEEDOR</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>MATERIAL_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>MATERIAL</name>
-          <schemaName>CRTLADM</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_L_MAT_PROVEEDOR</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_MAT_PROVEEDOR</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_MAT_PROVEEDOR</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_LINEA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_MAT_PROVEEDOR</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>L_MAT_PROVEEDOR</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>L_MAT_PROVEEDOR_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>L_MAT_PROVEEDOR</name>
-          <schemaName>CRTLADM</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>CRTLADM</schemaName>
-        <type>INDEX</type>
-      </indexID>
-    </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>L_MAT_PROVEEDOR_PK</name>
+      <name>PK_L_MAT_PROVEEDOR</name>
       <columnExpressions>
-        <columnExpression>
-          <expressionSource>CODIGO</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
         <columnExpression>
           <expressionSource>ID_FACTURA</expressionSource>
           <orderType>ASC</orderType>
@@ -305,6 +340,10 @@
         </columnExpression>
         <columnExpression>
           <expressionSource>ID_PROVEEDOR</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>CODIGO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>

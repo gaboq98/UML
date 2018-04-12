@@ -16,6 +16,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Correo electrónico del proveedor.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_PROVEEDOR</name>
@@ -31,6 +37,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Proveedor al que pertenece el correo electrónico.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -46,6 +58,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que registra el correo.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -55,6 +73,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que se registra la última modificación al correo.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -70,6 +94,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que realiza la última modificación al correo.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -79,18 +109,40 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha de la última modificación del correo electrónico.</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_EMAIL_PROV_FCH_REGISTRO</name>
-      <checkCondition>FECHA_REGISTRO= GETDATE()</checkCondition>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PK_EMAIL</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CORREO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROVEEDOR_EMAIL</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
       <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_EMAIL_PROV_FCH_ULT_MOD</name>
-      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
-      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>EMAIL_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROVEEDOR_EMAIL</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>INDEX</type>
+      </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>FK_EMAIL_PROV_ID_PROVEEDOR</name>
@@ -102,7 +154,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -118,31 +170,15 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_EMAIL</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CORREO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROVEEDOR_EMAIL</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_EMAIL_PROV_FCH_REGISTRO</name>
+      <checkCondition>FECHA_REGISTRO= GETDATE()</checkCondition>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>EMAIL_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVEEDOR_EMAIL</name>
-          <schemaName>CRTLADM</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>CRTLADM</schemaName>
-        <type>INDEX</type>
-      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_EMAIL_PROV_FCH_ULT_MOD</name>
+      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
+      <enabled>true</enabled>
     </constraint>
   </constraints>
   <indexes>

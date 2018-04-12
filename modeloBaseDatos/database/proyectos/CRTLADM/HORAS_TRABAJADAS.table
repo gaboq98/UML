@@ -3,21 +3,6 @@
   <name>HORAS_TRABAJADAS</name>
   <columns>
     <column>
-      <name>ID_EMPLEADO</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">6</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
       <name>ID_PROYECTO</name>
       <dataTypeUsage>
         <attributeValues>
@@ -31,6 +16,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Proyecto en el que se trabajó la cantidad de horas dichas.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>CANTIDAD_DE_HORAS</name>
@@ -47,6 +38,12 @@
       </dataTypeUsage>
       <default class="java.lang.String">1</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Cantidad de horas que se trabajó en el proyecto.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>QUINCENA</name>
@@ -72,6 +69,54 @@
       </dataTypeUsage>
       <default class="java.lang.String">&apos;P&apos;</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Estado del pago del salario, si está pendiente o cancelado.</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>ID_EMPLEADO</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Empleado que registró la cantidad de horas</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>SALARIO_HORA</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>precision</key>
+            <value class="java.lang.String">10</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMERIC</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Salario por hora del empleado.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -97,6 +142,12 @@
       </dataTypeUsage>
       <default class="java.lang.String">getdate()</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en la que se registra la cantidad de horas.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -112,6 +163,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que realizó la última modificación  a la cantidad de horas</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -122,14 +179,15 @@
       </dataTypeUsage>
       <default class="java.lang.String">getdate()</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que se realiza la última modificación a la cantidad de horas.</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_H_TRAB_ESTADO</name>
-      <checkCondition>ESTADO = &apos;P&apos; OR ESTADO = &apos;C&apos;</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>FK_H_TRAB_EMP_ID_EMPLEADO</name>
       <columnIDs>
@@ -140,7 +198,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -156,8 +214,17 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_H_TRAB_ESTADO</name>
+      <checkCondition>ESTADO = &apos;P&apos; OR ESTADO = &apos;C&apos;</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
   </constraints>
   <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">Cantidad de horas trabajadas por un empleado, también guarda el salario de cada empleado por hora para manejar el pago de salarios.</value>
+    </entry>
     <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>

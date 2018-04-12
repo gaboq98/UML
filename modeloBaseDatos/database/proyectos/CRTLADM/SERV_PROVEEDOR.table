@@ -1,37 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>GASTO</name>
+  <name>SERV_PROVEEDOR</name>
   <columns>
-    <column>
-      <name>ID_PROYECTO</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">8</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
-    <column>
-      <name>ID_FACTURA</name>
-      <dataTypeUsage>
-        <attributeValues>
-          <entry>
-            <key>size</key>
-            <value class="java.lang.Long">6</value>
-          </entry>
-        </attributeValues>
-        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>VARCHAR</typeName>
-        </dataTypeID>
-      </dataTypeUsage>
-      <notNull>true</notNull>
-    </column>
     <column>
       <name>ID_PROVEEDOR</name>
       <dataTypeUsage>
@@ -46,15 +16,54 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Proveedor que suminstra el servicio.</value>
+        </entry>
+      </properties>
     </column>
     <column>
-      <name>QUINCENA</name>
+      <name>CODIGO</name>
       <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">6</value>
+          </entry>
+        </attributeValues>
         <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
-          <typeName>DATE</typeName>
+          <typeName>VARCHAR</typeName>
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Código del servicio dentro del catálogo de la compañía.</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>CODIGO_SERV_PROV</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">10</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Código del servicio dentro del catálogo  del proveedor.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -70,6 +79,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que registra la relación.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -78,8 +93,14 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <default class="java.lang.String">GETDATE()</default>
+      <default class="java.lang.String">getdate()</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que se registra la relación.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -95,6 +116,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Perrsona que realiza la última modificación a la relación.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -103,64 +130,34 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
-      <default class="java.lang.String">GETDATE()</default>
+      <default class="java.lang.String">getdate()</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha de la última modificación a la relación.</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_GASTO</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROYECTO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>GASTO</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>CRTLADM</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>GASTO</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>CRTLADM</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>GASTO</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>CRTLADM</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_PROV_SRVC_FCH_REGISTRO</name>
+      <checkCondition>FECHA_REGISTRO = GETDATE()</checkCondition>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>GASTO_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>GASTO</name>
-          <schemaName>CRTLADM</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>CRTLADM</schemaName>
-        <type>INDEX</type>
-      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_PROV_SRVC_FCH_ULT_MOD</name>
+      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
+      <enabled>true</enabled>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_GST_FACT_ID_FACTURA</name>
+      <name>FK_PROV_SRVC_CODIGO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_FACTURA</name>
+          <name>CODIGO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>GASTO</name>
+            <name>SERV_PROVEEDOR</name>
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
@@ -170,9 +167,9 @@
       </columnIDs>
       <enabled>true</enabled>
       <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PK_FACTURA</name>
+        <name>PK_SERVICIO</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>FACTURA</name>
+          <name>SERVICIO</name>
           <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
@@ -181,12 +178,12 @@
       </referenceID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_GST_PROV_ID_PROVEEDOR</name>
+      <name>FK_PROV_SRVC_ID_PROVEEDOR</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
           <name>ID_PROVEEDOR</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>GASTO</name>
+            <name>SERV_PROVEEDOR</name>
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
@@ -206,13 +203,33 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_GST_PRY_ID_PROYECTO</name>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PK_PROV_SERVICIO</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROYECTO</name>
+          <name>CODIGO</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>GASTO</name>
+            <name>SERV_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_PROVEEDOR</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>SERV_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO_SERV_PROV</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>SERV_PROVEEDOR</name>
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
@@ -221,32 +238,72 @@
         </columnID>
       </columnIDs>
       <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PK_PROYECTO</name>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>PK_PROV_SERVICIO</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROYECTO</name>
+          <name>SERV_PROVEEDOR</name>
           <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
         <schemaName>CRTLADM</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>SERV_PROVEEDOR_UK1</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>CODIGO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>SERV_PROVEEDOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>SERV_PROVEEDOR_UK1</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>SERV_PROVEEDOR</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>INDEX</type>
+      </indexID>
     </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>GASTO_PK</name>
+      <name>PK_PROV_SERVICIO</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>ID_PROYECTO</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-        <columnExpression>
-          <expressionSource>ID_FACTURA</expressionSource>
+          <expressionSource>CODIGO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
         <columnExpression>
           <expressionSource>ID_PROVEEDOR</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+        <columnExpression>
+          <expressionSource>CODIGO_SERV_PROV</expressionSource>
+          <orderType>ASC</orderType>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <schema>
+        <name>CRTLADM</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>SERV_PROVEEDOR_UK1</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>CODIGO</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
@@ -258,6 +315,10 @@
     </index>
   </indexes>
   <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">Relación entre servicio y el proveedor que lo da.</value>
+    </entry>
     <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>

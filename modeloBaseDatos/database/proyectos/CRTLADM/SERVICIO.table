@@ -16,6 +16,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Código con el cual se identifica al servicio.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>DESCRIPCION</name>
@@ -32,6 +38,12 @@
       </dataTypeUsage>
       <default class="java.lang.String">&apos;Sin Descripcion&apos;</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Descripción del servicio.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -47,6 +59,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que registra el servicio.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -57,6 +75,12 @@
       </dataTypeUsage>
       <default class="java.lang.String">getdate()</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que se registra el servicio.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -72,6 +96,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que realiza la última modificación.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -82,19 +112,15 @@
       </dataTypeUsage>
       <default class="java.lang.String">getdate()</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en la que se realiza la última modificación a un servicio.</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_SRVC_FCH_REGISTRO</name>
-      <checkCondition>FECHA_REGISTRO = GETDATE()</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_SRVC_FCH_ULT_MOD</name>
-      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
       <name>PK_SERVICIO</name>
       <columnIDs>
@@ -105,7 +131,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -120,6 +146,16 @@
         <schemaName>CRTLADM</schemaName>
         <type>INDEX</type>
       </indexID>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_SRVC_FCH_REGISTRO</name>
+      <checkCondition>FECHA_REGISTRO = GETDATE()</checkCondition>
+      <enabled>true</enabled>
+    </constraint>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_SRVC_FCH_ULT_MOD</name>
+      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
+      <enabled>true</enabled>
     </constraint>
   </constraints>
   <indexes>

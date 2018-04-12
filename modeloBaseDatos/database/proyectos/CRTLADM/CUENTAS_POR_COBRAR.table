@@ -16,6 +16,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Identificador de la cuenta</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ESTADO</name>
@@ -31,6 +37,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Estado de la cuenta, se refiere si fue cancelada o sigue pendiente</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>MONTO_TOTAL</name>
@@ -46,6 +58,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Monto total que vale la cuenta</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>MONTO_PAGADO</name>
@@ -61,6 +79,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Monto que se ha pagado hasta el momento, se utiliza para no perder el valor inicial de la cuenta.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -76,6 +100,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Usuario que registró la cuenta.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -85,6 +115,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que se reginstró una cuenta.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -100,6 +136,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Usuario que modificó por última vez la cuenta.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -109,13 +151,40 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha de la última modificación del contrato.</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_CNT_ESTADO</name>
-      <checkCondition>ESTADO = &apos;P&apos; OR ESTADO = &apos;C&apos;</checkCondition>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>CUENTA_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_CONTRATO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>CUENTAS_POR_COBRAR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
       <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>CUENTA_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>CUENTAS_POR_COBRAR</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>INDEX</type>
+      </indexID>
     </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>FK_CNT_CONT_ID_CONTRATO</name>
@@ -127,7 +196,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -143,31 +212,10 @@
         <type>CONSTRAINT</type>
       </referenceID>
     </constraint>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>CUENTA_PK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_CONTRATO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>CUENTAS_POR_COBRAR</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
+    <constraint class="oracle.javatools.db.CheckConstraint">
+      <name>CK_CNT_ESTADO</name>
+      <checkCondition>ESTADO = &apos;P&apos; OR ESTADO = &apos;C&apos;</checkCondition>
       <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>CUENTA_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>CUENTAS_POR_COBRAR</name>
-          <schemaName>CRTLADM</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>CRTLADM</schemaName>
-        <type>INDEX</type>
-      </indexID>
     </constraint>
   </constraints>
   <indexes>

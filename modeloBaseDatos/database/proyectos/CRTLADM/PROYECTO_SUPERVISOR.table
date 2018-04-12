@@ -10,6 +10,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que el empleado inicio a supervisar el proyecto.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_EMPLEADO</name>
@@ -25,6 +31,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Empleado que supervisa el proyecto dado.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_PROYECTO</name>
@@ -40,6 +52,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Proyecto que es supervisado por el empleado</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_FINAL</name>
@@ -50,6 +68,12 @@
       </dataTypeUsage>
       <default class="java.lang.String">2020-12-31</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en la que el empleadtermina de supervisar el proyecto</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -65,6 +89,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Empleado que registró al supervisor.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -75,6 +105,12 @@
       </dataTypeUsage>
       <default class="java.lang.String">GetDate()</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en la que se registró el supervisor.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -100,9 +136,51 @@
       </dataTypeUsage>
       <default class="java.lang.String">GetDate()</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en la que se hizo la última modificación en la fila.</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>PROYECTO_SUPERVISOR_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>FECHA_INICIO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROYECTO_SUPERVISOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_EMPLEADO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>PROYECTO_SUPERVISOR</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>PROYECTO_SUPERVISOR_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>PROYECTO_SUPERVISOR</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>INDEX</type>
+      </indexID>
+    </constraint>
     <constraint class="oracle.javatools.db.FKConstraint">
       <name>PROYECTO_SUPERVISOR_FK1</name>
       <columnIDs>
@@ -113,7 +191,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -139,7 +217,7 @@
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
@@ -154,42 +232,6 @@
         <schemaName>SCHEMA1</schemaName>
         <type>CONSTRAINT</type>
       </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PROYECTO_SUPERVISOR_PK</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>FECHA_INICIO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROYECTO_SUPERVISOR</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_EMPLEADO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROYECTO_SUPERVISOR</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PROYECTO_SUPERVISOR_PK</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROYECTO_SUPERVISOR</name>
-          <schemaName>CRTLADM</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>CRTLADM</schemaName>
-        <type>INDEX</type>
-      </indexID>
     </constraint>
   </constraints>
   <indexes>
@@ -213,6 +255,10 @@
     </index>
   </indexes>
   <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">Tabla que registra qué supervisor supervisa cada proyecto.</value>
+    </entry>
     <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>

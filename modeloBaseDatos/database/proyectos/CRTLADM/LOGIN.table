@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
-  <name>PROV_SERVICIO</name>
+  <name>LOGIN</name>
   <columns>
     <column>
-      <name>CODIGO</name>
+      <name>LOGIN</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -16,9 +16,15 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Usuario con el que accede un usuario al sistema.</value>
+        </entry>
+      </properties>
     </column>
     <column>
-      <name>ID_PROVEEDOR</name>
+      <name>ID_EMPLEADO</name>
       <dataTypeUsage>
         <attributeValues>
           <entry>
@@ -31,6 +37,33 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Empleado al que pertenece el usuario y la contraseña.</value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>PASSWORD</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">20</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Contraseña del usuario</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_REGISTRO</name>
@@ -46,6 +79,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Persona que registró al usuario.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_REGISTRO</name>
@@ -54,7 +93,14 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
+      <default class="java.lang.String">getdate()</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en que se registra el usuario.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>ID_ULT_MOD</name>
@@ -70,6 +116,12 @@
         </dataTypeID>
       </dataTypeUsage>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Último usuario que realizó la última modifciación al usuario.</value>
+        </entry>
+      </properties>
     </column>
     <column>
       <name>FECHA_ULT_MOD</name>
@@ -78,101 +130,36 @@
           <typeName>DATE</typeName>
         </dataTypeID>
       </dataTypeUsage>
+      <default class="java.lang.String">getdate()</default>
       <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>Comment</key>
+          <value class="java.lang.String">Fecha en la que se realiza la última modificación al usuario.</value>
+        </entry>
+      </properties>
     </column>
   </columns>
   <constraints>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_PROV_SRVC_FCH_REGISTRO</name>
-      <checkCondition>FECHA_REGISTRO = GETDATE()</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.CheckConstraint">
-      <name>CK_PROV_SRVC_FCH_ULT_MOD</name>
-      <checkCondition>FECHA_ULT_MOD = GETDATE()</checkCondition>
-      <enabled>true</enabled>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_PROV_SRVC_CODIGO</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROV_SERVICIO</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PK_SERVICIO</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>SERVICIO</name>
-          <schemaName>CRTLADM</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
-    <constraint class="oracle.javatools.db.FKConstraint">
-      <name>FK_PROV_SRVC_ID_PROVEEDOR</name>
-      <columnIDs>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROV_SERVICIO</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-      </columnIDs>
-      <enabled>true</enabled>
-      <referenceID class="oracle.javatools.db.NameBasedID">
-        <name>PK_PROVEEDOR</name>
-        <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROVEEDOR</name>
-          <schemaName>CRTLADM</schemaName>
-          <type>TABLE</type>
-        </parent>
-        <schemaName>SCHEMA1</schemaName>
-        <type>CONSTRAINT</type>
-      </referenceID>
-    </constraint>
     <constraint class="oracle.javatools.db.PKConstraint">
-      <name>PK_PROV_SERVICIO</name>
+      <name>PK_LOGIN</name>
       <columnIDs>
         <columnID class="oracle.javatools.db.NameBasedID">
-          <name>CODIGO</name>
+          <name>LOGIN</name>
           <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROV_SERVICIO</name>
+            <name>LOGIN</name>
             <schemaName>CRTLADM</schemaName>
             <type>TABLE</type>
           </parent>
-          <schemaName>SCHEMA1</schemaName>
-          <type>COLUMN</type>
-        </columnID>
-        <columnID class="oracle.javatools.db.NameBasedID">
-          <name>ID_PROVEEDOR</name>
-          <parent class="oracle.javatools.db.NameBasedID">
-            <name>PROV_SERVICIO</name>
-            <schemaName>CRTLADM</schemaName>
-            <type>TABLE</type>
-          </parent>
-          <schemaName>SCHEMA1</schemaName>
+          <schemaName>CRTLADM</schemaName>
           <type>COLUMN</type>
         </columnID>
       </columnIDs>
       <enabled>true</enabled>
       <indexID class="oracle.javatools.db.NameBasedID">
-        <name>PROV_SERVICIO_PK</name>
+        <name>LOGIN_PK</name>
         <parent class="oracle.javatools.db.NameBasedID">
-          <name>PROV_SERVICIO</name>
+          <name>LOGIN</name>
           <schemaName>CRTLADM</schemaName>
           <type>TABLE</type>
         </parent>
@@ -180,17 +167,39 @@
         <type>INDEX</type>
       </indexID>
     </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>FK_LOGIN_EMPLEADO</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID_EMPLEADO</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>LOGIN</name>
+            <schemaName>CRTLADM</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>CRTLADM</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>PK_EMPLEADO</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>EMPLEADO</name>
+          <schemaName>CRTLADM</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>CRTLADM</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
   </constraints>
   <indexes>
     <index>
-      <name>PROV_SERVICIO_PK</name>
+      <name>LOGIN_PK</name>
       <columnExpressions>
         <columnExpression>
-          <expressionSource>CODIGO</expressionSource>
-          <orderType>ASC</orderType>
-        </columnExpression>
-        <columnExpression>
-          <expressionSource>ID_PROVEEDOR</expressionSource>
+          <expressionSource>LOGIN</expressionSource>
           <orderType>ASC</orderType>
         </columnExpression>
       </columnExpressions>
@@ -202,6 +211,10 @@
     </index>
   </indexes>
   <properties>
+    <entry>
+      <key>Comment</key>
+      <value class="java.lang.String">Debido a que no todos los empleados usan el sistema, esta tabla funciona para asignar usuarios de login y contraseñas a los empleados que sí usan el sistema.</value>
+    </entry>
     <entry>
       <key>TableType</key>
       <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
